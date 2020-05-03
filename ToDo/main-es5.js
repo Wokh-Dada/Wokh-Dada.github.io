@@ -412,65 +412,41 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
-    var StoreTodosService = /*#__PURE__*/function () {
-      function StoreTodosService() {
-        _classCallCheck(this, StoreTodosService);
+    var StoreTodosService = function StoreTodosService() {
+      _classCallCheck(this, StoreTodosService);
 
-        this.items = [{
-          id: 1,
-          title: 'Сделать 5 отжиманий',
-          category: 'Личные дела',
-          completed: false,
-          important: false
-        }, {
-          id: 1,
-          title: 'Купить новую приору 2018 года',
-          category: 'Покупки',
-          completed: false,
-          important: false
-        }, {
-          id: 1,
-          title: 'Купить фотоаппарат до свадьбы',
-          category: 'Покупки',
-          completed: false,
-          important: false
-        }, {
-          id: 1,
-          title: 'Встретится с Мариной',
-          category: 'Личные дела',
-          completed: false,
-          important: false
-        }, {
-          id: 1,
-          title: 'Прочитать 100500 книг до конца года',
-          category: 'Чтение',
-          completed: false,
-          important: false
-        }];
-      }
-
-      _createClass(StoreTodosService, [{
-        key: "getItems",
-        value: function getItems() {
-          return this.items;
-        }
+      this.items = [{
+        id: 1,
+        title: 'Сделать 5 отжиманий',
+        category: 'Личные дела',
+        complited: false,
+        important: false
       }, {
-        key: "toggleCompleted",
-        value: function toggleCompleted(id) {
-          this.items = this.items.map(function (item) {
-            if (item.id === id) {
-              return Object.assign(Object.assign({}, item), {
-                completed: !item.completed
-              });
-            }
-
-            return item;
-          });
-        }
-      }]);
-
-      return StoreTodosService;
-    }();
+        id: 1,
+        title: 'Купить новую приору 2018 года',
+        category: 'Покупки',
+        complited: false,
+        important: false
+      }, {
+        id: 1,
+        title: 'Купить фотоаппарат до свадьбы',
+        category: 'Покупки',
+        complited: false,
+        important: false
+      }, {
+        id: 1,
+        title: 'Встретится с Мариной',
+        category: 'Личные дела',
+        complited: false,
+        important: false
+      }, {
+        id: 1,
+        title: 'Прочитать 100500 книг до конца года',
+        category: 'Чтение',
+        complited: false,
+        important: false
+      }];
+    };
 
     StoreTodosService.ɵfac = function StoreTodosService_Factory(t) {
       return new (t || StoreTodosService)();
@@ -591,14 +567,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "input", 16);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function TodosComponent_li_25_Template_input_click_2_listener() {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function TodosComponent_li_25_Template_input_ngModelChange_2_listener($event) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r11);
 
           var item_r1 = ctx.$implicit;
-
-          var ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-
-          return ctx_r10.toggleCompleted(item_r1.id);
+          return item_r1.complited = $event;
         });
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -635,11 +608,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 2) {
         var item_r1 = ctx.$implicit;
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("completed-task", item_r1.completed)("important-task", item_r1.important);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("completed-task", item_r1.complited)("important-task", item_r1.important);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("checked", item_r1.completed);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("checked", item_r1.complited)("ngModel", item_r1.complited);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
@@ -667,14 +640,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       _createClass(TodosComponent, [{
-        key: "toggleCompleted",
-        value: function toggleCompleted(id) {
-          this.todosStore.toggleCompleted(id);
-        }
-      }, {
         key: "getItems",
         value: function getItems() {
-          return this.todosStore.getItems();
+          return this.todosStore.items;
         }
       }, {
         key: "ngOnInit",
@@ -693,7 +661,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       selectors: [["app-todos"]],
       decls: 26,
       vars: 1,
-      consts: [[1, "form-row", "mt-2", "mb-2"], [1, "col-6"], ["placeholder", "\u0412\u0432\u0435\u0434\u0438 \u0437\u0430\u0434\u0430\u043D\u0438\u0435", "type", "text", 1, "form-control"], [1, "col-4"], [1, "form-control"], ["disabled", "", "value", "0"], ["_", ""], [1, "col"], [1, "btn", "btn-success", "w-100"], [1, "d-flex", "justify-content-between"], ["href", "#", 1, "small", "text-muted"], ["href", "#", 1, "text-danger", "small"], [1, "list-group", "list-group-flush"], ["class", "list-group-item d-flex justify-content-between align-items-center", 3, "completed-task", "important-task", 4, "ngFor", "ngForOf"], [1, "list-group-item", "d-flex", "justify-content-between", "align-items-center"], [1, "task-checkbox"], ["type", "checkbox", 1, "ng-untouched", "ng-pristine", "ng-valid", 3, "checked", "click"], [1, "task-title"], [1, "task-category"], [1, "align-middle"], [1, "btn-for-important"], ["class", "material-icons orange-icon", 3, "click", 4, "ngIf"], [1, "material-icons", "orange-icon", 3, "click"], ["aria-hidden", "true", 1, "fa", "fa-star-o"], ["aria-hidden", "true", 1, "fa", "fa-star"]],
+      consts: [[1, "form-row", "mt-2", "mb-2"], [1, "col-6"], ["placeholder", "\u0412\u0432\u0435\u0434\u0438 \u0437\u0430\u0434\u0430\u043D\u0438\u0435", "type", "text", 1, "form-control"], [1, "col-4"], [1, "form-control"], ["disabled", "", "value", "0"], ["_", ""], [1, "col"], [1, "btn", "btn-success", "w-100"], [1, "d-flex", "justify-content-between"], ["href", "#", 1, "small", "text-muted"], ["href", "#", 1, "text-danger", "small"], [1, "list-group", "list-group-flush"], ["class", "list-group-item d-flex justify-content-between align-items-center", 3, "completed-task", "important-task", 4, "ngFor", "ngForOf"], [1, "list-group-item", "d-flex", "justify-content-between", "align-items-center"], [1, "task-checkbox"], ["type", "checkbox", 1, "ng-untouched", "ng-pristine", "ng-valid", 3, "checked", "ngModel", "ngModelChange"], [1, "task-title"], [1, "task-category"], [1, "align-middle"], [1, "btn-for-important"], ["class", "material-icons orange-icon", 3, "click", 4, "ngIf"], [1, "material-icons", "orange-icon", 3, "click"], ["aria-hidden", "true", 1, "fa", "fa-star-o"], ["aria-hidden", "true", 1, "fa", "fa-star"]],
       template: function TodosComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -776,7 +744,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "ul", 12);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](25, TodosComponent_li_25_Template, 11, 9, "li", 13);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](25, TodosComponent_li_25_Template, 11, 10, "li", 13);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
@@ -787,7 +755,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.getItems());
         }
       },
-      directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgSelectOption"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ɵangular_packages_forms_forms_x"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"]],
+      directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgSelectOption"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ɵangular_packages_forms_forms_x"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["CheckboxControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgModel"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"]],
       styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3RvZG9zL3RvZG9zLmNvbXBvbmVudC5jc3MifQ== */"]
     });
     /*@__PURE__*/
