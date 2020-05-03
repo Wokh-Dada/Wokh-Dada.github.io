@@ -501,31 +501,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.items = [{
           id: 1,
           title: 'Сделать 5 отжиманий',
-          category: 'Личные дела',
+          category: 'личные дела',
           completed: false,
           important: false
         }, {
           id: 2,
           title: 'Купить новую приору 2018 года',
-          category: 'Покупки',
+          category: 'покупки',
           completed: false,
           important: false
         }, {
           id: 3,
           title: 'Купить фотоаппарат до свадьбы',
-          category: 'Покупки',
+          category: 'покупки',
           completed: false,
           important: false
         }, {
           id: 4,
           title: 'Встретится с Мариной',
-          category: 'Личные дела',
+          category: 'личные дела',
           completed: false,
           important: false
         }, {
           id: 5,
           title: 'Прочитать 100500 книг до конца года',
-          category: 'Чтение',
+          category: 'чтение',
           completed: false,
           important: false
         }];

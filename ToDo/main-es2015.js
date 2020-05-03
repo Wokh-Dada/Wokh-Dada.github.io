@@ -257,11 +257,11 @@ __webpack_require__.r(__webpack_exports__);
 class StoreTodosService {
     constructor() {
         this.items = [
-            { id: 1, title: 'Сделать 5 отжиманий', category: 'Личные дела', completed: false, important: false },
-            { id: 2, title: 'Купить новую приору 2018 года', category: 'Покупки', completed: false, important: false },
-            { id: 3, title: 'Купить фотоаппарат до свадьбы', category: 'Покупки', completed: false, important: false },
-            { id: 4, title: 'Встретится с Мариной', category: 'Личные дела', completed: false, important: false },
-            { id: 5, title: 'Прочитать 100500 книг до конца года', category: 'Чтение', completed: false, important: false }
+            { id: 1, title: 'Сделать 5 отжиманий', category: 'личные дела', completed: false, important: false },
+            { id: 2, title: 'Купить новую приору 2018 года', category: 'покупки', completed: false, important: false },
+            { id: 3, title: 'Купить фотоаппарат до свадьбы', category: 'покупки', completed: false, important: false },
+            { id: 4, title: 'Встретится с Мариной', category: 'личные дела', completed: false, important: false },
+            { id: 5, title: 'Прочитать 100500 книг до конца года', category: 'чтение', completed: false, important: false }
         ];
         this.selectedCategory = null;
         this.onlyImportant = false;
