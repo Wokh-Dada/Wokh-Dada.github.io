@@ -267,9 +267,17 @@ class StoreTodosService {
         this.onlyImportant = false;
     }
     addDo(text, categ) {
-        const id = this.items.length + 1;
-        const item = { id, title: text, category: categ, completed: false, important: false };
-        this.items.push(item);
+        if (text === '') {
+            return alert('заполните задание');
+        }
+        else if (categ === '') {
+            return alert('выберите категорию');
+        }
+        else {
+            const id = this.items.length + 1;
+            const item = { id, title: text, category: categ, completed: false, important: false };
+            this.items.push(item);
+        }
     }
     getOnlyInportant() {
         return this.onlyImportant;

@@ -536,15 +536,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(StoreTodosService, [{
         key: "addDo",
         value: function addDo(text, categ) {
-          var id = this.items.length + 1;
-          var item = {
-            id: id,
-            title: text,
-            category: categ,
-            completed: false,
-            important: false
-          };
-          this.items.push(item);
+          if (text === '') {
+            return alert('заполните задание');
+          } else if (categ === '') {
+            return alert('выберите категорию');
+          } else {
+            var id = this.items.length + 1;
+            var item = {
+              id: id,
+              title: text,
+              category: categ,
+              completed: false,
+              important: false
+            };
+            this.items.push(item);
+          }
         }
       }, {
         key: "getOnlyInportant",
