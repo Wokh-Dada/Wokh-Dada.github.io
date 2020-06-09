@@ -5077,26 +5077,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var NewSinglePost = function NewSinglePost(props) {
       return props.arr.map(function (item) {
         return Object(_index_051815ee_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
-          "class": bootstrapClass(item.block)
+          "class": "col-lg"
         }, Object(_index_051815ee_js__WEBPACK_IMPORTED_MODULE_0__["h"])("s-abdullakh-new-single-post", {
           arr: item
         }));
       });
     };
-    /*
-    * функция для присваивания класса бутстрап
-     */
-
-
-    function bootstrapClass(x) {
-      switch (x) {
-        case 's-abdullakh-new-post':
-          return 'col-lg-4 col-12';
-
-        case 'events':
-          return 'col-lg';
-      }
-    }
 
     SAbdullakhEvents.style = sAbdullakhEventsCss;
     var sAbdullakhFooterCss = ".footer{height:424px}.footer_margin{padding-top:95px}.corp_info{font-weight:500;font-size:20px;padding:0 20px 0 0}.corp_address{margin-top:30px}.social_link{display:inline-block;width:40px;height:40px;border-radius:50%;background-color:#eeeeee;line-height:40px;text-align:center}.social_link a{color:#9b9b9b;font-size:18px;-webkit-transition:0.5s;transition:0.5s}.social_link a:hover{color:#0056fb}.title_links{font-weight:600}.footer_links{margin-top:15px}.footer_link{display:block;padding-bottom:15px;font-weight:400;font-size:14px}.footer_link a{text-decoration:none;color:black;font-weight:500}.footer_link a:hover{color:#2590a5}.footer_newsletter{margin-top:30px}.footer_newsletter_title{font-weight:500;padding-bottom:24px}.newsletter_input_footer{width:210px;height:52px}.newsletter_btn_footer{background-color:#2dca73;color:white;width:60px;height:52px;font-size:27px}.newsletter_btn_footer:hover{background-color:#28a745}.copyright{margin-top:60px}.copyright_content_left{float:right}.copyright_content_languages{font-weight:700;font-size:18px}.language_icon{font-size:22px;color:#9c9c9c}.content_language{padding-top:10px;font-weight:500}.content_language span a{color:black;text-decoration:none}";
@@ -5669,26 +5655,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var NewSinglePost$1 = function NewSinglePost$1(props) {
       return props.arr.map(function (item) {
         return Object(_index_051815ee_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", {
-          "class": bootstrapClass$1(item.block)
+          "class": "col-lg-4 col-12"
         }, Object(_index_051815ee_js__WEBPACK_IMPORTED_MODULE_0__["h"])("s-abdullakh-new-single-post", {
           arr: item
         }));
       });
     };
-    /*
-    * функция для присваивания класса бутстрап
-     */
-
-
-    function bootstrapClass$1(x) {
-      switch (x) {
-        case 's-abdullakh-new-post':
-          return 'col-lg-4 col-12';
-
-        case 'events':
-          return 'col-lg';
-      }
-    }
 
     SAbdullakhNewPost.style = sAbdullakhNewPostCss;
     var sAbdullakhNewSinglePostCss = ".widget_photo_single_page{height:285px;width:100%;background-size:cover;background-position:center}.widget_content{margin:18px 0 10px 0}.widget_read_toggle{margin-top:15px}.widget_read_toggle a:hover{color:#0056fb}.new_single_post_widget_title{font-weight:bold;font-size:20px}@media (max-width: 992px){.widget_margin{margin-top:40px}}";
