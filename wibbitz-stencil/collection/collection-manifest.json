@@ -1,0 +1,31 @@
+{
+  "entries": [
+    "./components/my-component/my-component.js",
+    "./components/res/view/footer-a/footer-a.js",
+    "./components/res/view/footer-a/res/view/s-abdullakh-footer-icon-block/s-abdullakh-footer-icon-block.js",
+    "./components/res/view/footer-a/res/view/s-abdullakh-footer-icon-block/res/view/s-abdullakh-footer-icons/s-abdullakh-footer-icons.js",
+    "./components/res/view/footer-a/res/view/s-abdullakh-footer-menu/s-abdullakh-footer-menu.js",
+    "./components/res/view/footer-a/res/view/s-abdullakh-footer-menu/res/view/s-abdullakh-footer-links/s-abdullakh-footer-links.js",
+    "./components/res/view/my-header/my-header.js",
+    "./components/res/view/my-header/res/view/menu-item.js",
+    "./components/res/view/new-listiner/new-listiner.js",
+    "./components/res/view/new-listiner/res/view/s-abdullakh-listiner/s-abdullakh-listiner.js",
+    "./components/res/view/new-post/new-post.js",
+    "./components/res/view/new-single-post/new-single-post.js",
+    "./components/theme-one/res/view/events-a/events-a.js",
+    "./components/theme-one/res/view/news-a/news-a.js",
+    "./components/theme-one/res/view/news-a/res/view/s-abdullakh-news-main-block/s-abdullakh-news-main-block.js",
+    "./components/theme-one/res/view/news-a/res/view/sidebar/sidebar-a.js",
+    "./components/theme-one/res/view/popular-resources/popular-resources.js",
+    "./components/theme-one/res/view/popular-resources/res/view/popular-resources-aside/popular-resources-aside.js",
+    "./components/theme-one/res/view/popular-resources/res/view/popular-resources-banner/popular-resources-banner.js",
+    "./components/theme-two/res/view/app-blog/app-blog.js"
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "1.12.2",
+    "typescriptVersion": "3.8.3"
+  },
+  "collections": [],
+  "bundles": []
+}
