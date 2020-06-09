@@ -46,7 +46,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   /***/
   function node_modulesAbdullakhWibbitzV2DistEsmLazyRecursiveEntryJs$IncludeEntryJs$ExcludeSystemEntryJs$(module, exports, __webpack_require__) {
     var map = {
-      "./app-blog_20.entry.js": ["./node_modules/abdullakh-wibbitz-v2/dist/esm/app-blog_20.entry.js", "stencil-app-blog_20-entry-js"]
+      "./my-component_20.entry.js": ["./node_modules/abdullakh-wibbitz-v2/dist/esm/my-component_20.entry.js", "stencil-my-component_20-entry-js"]
     };
 
     function webpackAsyncContext(req) {
@@ -248,10 +248,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "clickOnSwitchTheme",
         value: function clickOnSwitchTheme(_ref) {
           var detail = _ref.detail;
-          return console.log('clickOnSwitchTheme:', detail.target.id);
+          console.log('clickOnSwitchTheme:', detail.target.id);
 
           if (detail.target.id === 'theme_1') {
-            this.router.navigate(['theme_1']);
+            this.router.navigate(['']);
           } else if (detail.target.id === 'theme_2') {
             this.router.navigate(['theme_2']);
           }
@@ -313,13 +313,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       consts: [[3, "logoUrl", "menu", "theme", "subscribeText", "clickOnTheme", "clickOnHeader", "clickOnSwitchTheme"], [3, "footer", "clickOnFooter"]],
       template: function AppComponent_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "my-header", 0);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "s-abdullakh-header", 0);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickOnTheme", function AppComponent_Template_my_header_clickOnTheme_0_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickOnTheme", function AppComponent_Template_s_abdullakh_header_clickOnTheme_0_listener() {
             return ctx.clickOnTheme();
-          })("clickOnHeader", function AppComponent_Template_my_header_clickOnHeader_0_listener($event) {
+          })("clickOnHeader", function AppComponent_Template_s_abdullakh_header_clickOnHeader_0_listener($event) {
             return ctx.clickOnHeader($event);
-          })("clickOnSwitchTheme", function AppComponent_Template_my_header_clickOnSwitchTheme_0_listener($event) {
+          })("clickOnSwitchTheme", function AppComponent_Template_s_abdullakh_header_clickOnSwitchTheme_0_listener($event) {
             return ctx.clickOnSwitchTheme($event);
           });
 
@@ -327,9 +327,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "router-outlet");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "footer-a", 1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "s-abdullakh-footer", 1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickOnFooter", function AppComponent_Template_footer_a_clickOnFooter_2_listener($event) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickOnFooter", function AppComponent_Template_s_abdullakh_footer_clickOnFooter_2_listener($event) {
             return ctx.clickOnFooter($event);
           });
 
@@ -655,41 +655,41 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       consts: [[3, "newsImg", "news", "sidebar", "clickOnNews"], [3, "newPostTitle", "newPost", "clickOnNewPost"], [3, "popularAsideTitle", "popularAside", "popularBanner", "clickOnPopular"], [3, "eventsTitle", "events", "clickOnEvents"], [3, "newlistner", "clickOnListiner"]],
       template: function FirstPageComponent_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "news-a", 0);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "s-abdullakh-news", 0);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickOnNews", function FirstPageComponent_Template_news_a_clickOnNews_0_listener($event) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickOnNews", function FirstPageComponent_Template_s_abdullakh_news_clickOnNews_0_listener($event) {
             return ctx.clickOnNews($event);
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "new-post", 1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "s-abdullakh-new-post", 1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickOnNewPost", function FirstPageComponent_Template_new_post_clickOnNewPost_1_listener($event) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickOnNewPost", function FirstPageComponent_Template_s_abdullakh_new_post_clickOnNewPost_1_listener($event) {
             return ctx.clickOnNewPost($event);
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "popular-resources", 2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "s-abdullakh-popular-resources", 2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickOnPopular", function FirstPageComponent_Template_popular_resources_clickOnPopular_2_listener($event) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickOnPopular", function FirstPageComponent_Template_s_abdullakh_popular_resources_clickOnPopular_2_listener($event) {
             return ctx.clickOnPopular($event);
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "events-a", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "s-abdullakh-events", 3);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickOnEvents", function FirstPageComponent_Template_events_a_clickOnEvents_3_listener($event) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickOnEvents", function FirstPageComponent_Template_s_abdullakh_events_clickOnEvents_3_listener($event) {
             return ctx.clickOnEvents($event);
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "new-listiner", 4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "s-abdullakh-new-listiner", 4);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickOnListiner", function FirstPageComponent_Template_new_listiner_clickOnListiner_4_listener($event) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickOnListiner", function FirstPageComponent_Template_s_abdullakh_new_listiner_clickOnListiner_4_listener($event) {
             return ctx.clickOnListiner($event);
           });
 
@@ -763,13 +763,45 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _service_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! ../service.service */
+    "./src/app/service.service.ts");
 
     var SecondPageComponent = /*#__PURE__*/function () {
-      function SecondPageComponent() {
+      function SecondPageComponent(secondPageStore) {
         _classCallCheck(this, SecondPageComponent);
+
+        this.secondPageStore = secondPageStore;
       }
+      /*listener*/
+
 
       _createClass(SecondPageComponent, [{
+        key: "blog",
+        value: function blog() {
+          return this.secondPageStore.getBlogItems().p;
+        }
+      }, {
+        key: "newlistner",
+        value: function newlistner() {
+          return this.secondPageStore.getFirsrPageItems().newlistner;
+        }
+        /**
+         * клик по button в компоненете Listiner
+         */
+
+      }, {
+        key: "clickOnListiner",
+        value: function clickOnListiner(_ref9) {
+          var detail = _ref9.detail;
+          return console.log("clickOnListiner:", detail);
+        }
+        /*listener*/
+
+      }, {
         key: "ngOnInit",
         value: function ngOnInit() {}
       }]);
@@ -778,21 +810,34 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }();
 
     SecondPageComponent.ɵfac = function SecondPageComponent_Factory(t) {
-      return new (t || SecondPageComponent)();
+      return new (t || SecondPageComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_service_service__WEBPACK_IMPORTED_MODULE_1__["ServiceService"]));
     };
 
     SecondPageComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
       type: SecondPageComponent,
       selectors: [["app-second-page"]],
       decls: 2,
-      vars: 0,
+      vars: 2,
+      consts: [[3, "p"], [3, "newlistner", "clickOnListiner"]],
       template: function SecondPageComponent_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "s-abdullakh-app-blog", 0);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "second-page works!");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "s-abdullakh-new-listiner", 1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickOnListiner", function SecondPageComponent_Template_s_abdullakh_new_listiner_clickOnListiner_1_listener($event) {
+            return ctx.clickOnListiner($event);
+          });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("p", ctx.blog());
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("newlistner", ctx.newlistner());
         }
       },
       styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3NlY29uZC1wYWdlL3NlY29uZC1wYWdlLmNvbXBvbmVudC5jc3MifQ== */"]
@@ -808,7 +853,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           styleUrls: ['./second-page.component.css']
         }]
       }], function () {
-        return [];
+        return [{
+          type: _service_service__WEBPACK_IMPORTED_MODULE_1__["ServiceService"]
+        }];
       }, null);
     })();
     /***/
@@ -893,19 +940,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }],
           newPostTitle: 'New Blog Posts',
           newPost: [{
-            newPostImg: "https://via.placeholder.com/201x180?text=newPost",
+            img: "https://via.placeholder.com/201x180?text=newPost",
             block: 'new-post',
             category: 'Blog Post',
             title: '4 organic ways to improve your website KPIs',
             btnText: 'Read Report'
           }, {
-            newPostImg: "https://via.placeholder.com/201x180?text=newPost",
+            img: "https://via.placeholder.com/201x180?text=newPost",
             block: 'new-post',
             category: 'Blog Post',
             title: 'How to turn your next event into a video content goldmine',
             btnText: 'Read Report'
           }, {
-            newPostImg: "https://via.placeholder.com/201x180?text=newPost",
+            img: "https://via.placeholder.com/201x180?text=newPost",
             block: 'new-post',
             category: 'Blog Post',
             title: 'How to quickly turn ypur podcast into a video script',
@@ -935,19 +982,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }],
           eventsTitle: 'Upcoming Events',
           events: [{
-            eventsImg: "https://via.placeholder.com/201x180?text=Event",
+            img: "https://via.placeholder.com/201x180?text=Event",
             block: 'events',
             category: 'Blog Post',
             title: '4 organic ways to improve your website KPIs',
             btnText: 'Read Report'
           }, {
-            eventsImg: "https://via.placeholder.com/201x180?text=Event",
+            img: "https://via.placeholder.com/201x180?text=Event",
             block: 'events',
             category: 'Blog Post',
             title: 'How to turn your next event into a video content goldmine',
             btnText: 'Read Report'
           }, {
-            eventsImg: "https://via.placeholder.com/201x180?text=Event",
+            img: "https://via.placeholder.com/201x180?text=Event",
             block: 'events',
             category: 'Blog Post',
             title: 'How to quickly turn ypur podcast into a video script',
@@ -1090,6 +1137,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "sidebar",
         value: function sidebar() {
           return this.firstPage.sidebar;
+        }
+      }, {
+        key: "getBlogItems",
+        value: function getBlogItems() {
+          return this.blog;
         }
       }, {
         key: "getFooter",
