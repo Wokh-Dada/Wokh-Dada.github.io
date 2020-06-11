@@ -46,7 +46,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   /***/
   function node_modulesSAbdullakhCompanycardsDistEsmLazyRecursiveEntryJs$IncludeEntryJs$ExcludeSystemEntryJs$(module, exports, __webpack_require__) {
     var map = {
-      "./my-component_27.entry.js": ["./node_modules/s-abdullakh-companycards/dist/esm/my-component_27.entry.js", "stencil-my-component_27-entry-js"]
+      "./my-component_30.entry.js": ["./node_modules/s-abdullakh-companycards/dist/esm/my-component_30.entry.js", "stencil-my-component_30-entry-js"]
     };
 
     function webpackAsyncContext(req) {
@@ -403,7 +403,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getpreviewBackground",
         value: function getpreviewBackground() {
-          return this.companyStore.getpreviewBackground();
+          return this.companyStore.getpreviewBackground().previewBackgroundBlock;
         }
         /**
          * клик по элементам clickOnIconsBlock
@@ -414,6 +414,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function clickOnIconsBlock(_ref11) {
           var detail = _ref11.detail;
           return console.log('clickOnIconsBlock:', detail);
+        }
+        /*IconsBlock*/
+
+        /*IconsBlock*/
+
+      }, {
+        key: "getfooter",
+        value: function getfooter() {
+          return this.companyStore.getfooter();
         }
       }]);
 
@@ -428,8 +437,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       type: AppComponent,
       selectors: [["app-root"]],
       decls: 15,
-      vars: 16,
-      consts: [[1, "topThreeBlocks"], [3, "headText", "headNav", "clickOnHeader"], [3, "productPresentation", "clickOnProductPresentation"], [3, "personalSecurityImg", "personalSecurity", "clickOnPersonalSecurity"], [3, "expenseManagementImg", "expenseManagement", "clickOnPersonalSecurity"], [3, "clauseMatch", "clickOnClauseMatch"], [3, "securityControlImg", "securityControl", "clickOnSecurityControl"], [3, "cardDesign", "clickOnCardDesign"], [3, "otherFeatures", "featuresblock", "clickOnOtherFeatures"], [3, "exploreFeatures", "clickOnExploreFeature"], [3, "linkBlock", "clickOnLinkBlock"], [3, "previewBackground", "clickOnIconsBlock"]],
+      vars: 17,
+      consts: [[1, "topThreeBlocks"], [3, "headText", "headNav", "clickOnHeader"], [3, "productPresentation", "clickOnProductPresentation"], [3, "personalSecurityImg", "personalSecurity", "clickOnPersonalSecurity"], [3, "expenseManagementImg", "expenseManagement", "clickOnPersonalSecurity"], [3, "clauseMatch", "clickOnClauseMatch"], [3, "securityControlImg", "securityControl", "clickOnSecurityControl"], [3, "cardDesign", "clickOnCardDesign"], [3, "otherFeatures", "featuresblock", "clickOnOtherFeatures"], [3, "exploreFeatures", "clickOnExploreFeature"], [3, "linkBlock", "clickOnLinkBlock"], [3, "previewBackground", "clickOnIconsBlock"], [3, "footer"]],
       template: function AppComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -528,7 +537,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](14, "s-abdullakh-footer-block");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](14, "s-abdullakh-footer", 12);
         }
 
         if (rf & 2) {
@@ -575,6 +584,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("previewBackground", ctx.getpreviewBackground());
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("footer", ctx.getfooter());
         }
       },
       styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"]
@@ -947,6 +960,98 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             "class": 'four'
           }]
         };
+        this.footer = [[{
+          menuTitle: 'PERSONAL',
+          menuTitleActive: 'BUSINESS'
+        }], [{
+          title: 'PRODUCT',
+          id: 'PRODUCT',
+          items: [{
+            id: 'Product tour',
+            linkName: 'Product tour'
+          }, {
+            id: 'For accountants',
+            linkName: 'For accountants'
+          }, {
+            id: 'Pricing',
+            linkName: 'Pricing'
+          }]
+        }], [{
+          title: 'FEATURES',
+          id: 'FEATURES',
+          items: [{
+            id: 'Accounts',
+            linkName: 'Accounts'
+          }, {
+            id: 'Payments',
+            linkName: 'Payments'
+          }]
+        }, {
+          title: 'Company cards',
+          id: 'Company cards',
+          items: [{
+            id: 'Roles & Permissions',
+            linkName: 'Roles & Permissions'
+          }, {
+            id: 'API & Integrations',
+            linkName: 'API & Integrations'
+          }, {
+            id: 'Mobile app',
+            linkName: 'Mobile app'
+          }, {
+            id: 'Security',
+            linkName: 'Security'
+          }, {
+            id: 'Perks',
+            linkName: 'Perks'
+          }]
+        }], [{
+          title: 'Resources',
+          id: 'Resources',
+          items: [{
+            id: 'Blog',
+            linkName: 'Blog'
+          }, {
+            id: 'Community',
+            linkName: 'Community'
+          }, {
+            id: 'Help centre',
+            linkName: 'Help centre'
+          }, {
+            id: 'Webinar',
+            linkName: 'Webinar'
+          }]
+        }], [{
+          title: 'Company',
+          items: [{
+            id: 'About',
+            linkName: 'About'
+          }, {
+            id: 'Contact',
+            linkName: 'Contact'
+          }, {
+            id: 'Careers',
+            linkName: 'Careers'
+          }]
+        }], [{
+          title: 'FOLLOW',
+          items: [{
+            id: 'Facebook',
+            linkName: 'Facebook'
+          }, {
+            id: 'Instagram',
+            linkName: 'Instagram'
+          }, {
+            id: 'Twitter',
+            linkName: 'Twitter'
+          }, {
+            id: 'LinkedIn',
+            linkName: 'LinkedIn'
+          }, {
+            id: 'Dribbble',
+            linkName: 'Dribbble'
+          }]
+        }]];
       }
 
       _createClass(ServiceStoreService, [{
@@ -1008,6 +1113,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "getpreviewBackground",
         value: function getpreviewBackground() {
           return this.previewBackground;
+        }
+      }, {
+        key: "getfooter",
+        value: function getfooter() {
+          return this.footer;
         }
       }]);
 

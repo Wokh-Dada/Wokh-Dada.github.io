@@ -31,9 +31,9 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./my-component_27.entry.js": [
-		"./node_modules/s-abdullakh-companycards/dist/esm/my-component_27.entry.js",
-		"stencil-my-component_27-entry-js"
+	"./my-component_30.entry.js": [
+		"./node_modules/s-abdullakh-companycards/dist/esm/my-component_30.entry.js",
+		"stencil-my-component_30-entry-js"
 	]
 };
 function webpackAsyncContext(req) {
@@ -238,7 +238,7 @@ class AppComponent {
     /*linkBlock*/
     /*IconsBlock*/
     getpreviewBackground() {
-        return this.companyStore.getpreviewBackground();
+        return this.companyStore.getpreviewBackground().previewBackgroundBlock;
     }
     /**
      * клик по элементам clickOnIconsBlock
@@ -246,9 +246,14 @@ class AppComponent {
     clickOnIconsBlock({ detail }) {
         return console.log('clickOnIconsBlock:', detail);
     }
+    /*IconsBlock*/
+    /*IconsBlock*/
+    getfooter() {
+        return this.companyStore.getfooter();
+    }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_service_store_service__WEBPACK_IMPORTED_MODULE_1__["ServiceStoreService"])); };
-AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 15, vars: 16, consts: [[1, "topThreeBlocks"], [3, "headText", "headNav", "clickOnHeader"], [3, "productPresentation", "clickOnProductPresentation"], [3, "personalSecurityImg", "personalSecurity", "clickOnPersonalSecurity"], [3, "expenseManagementImg", "expenseManagement", "clickOnPersonalSecurity"], [3, "clauseMatch", "clickOnClauseMatch"], [3, "securityControlImg", "securityControl", "clickOnSecurityControl"], [3, "cardDesign", "clickOnCardDesign"], [3, "otherFeatures", "featuresblock", "clickOnOtherFeatures"], [3, "exploreFeatures", "clickOnExploreFeature"], [3, "linkBlock", "clickOnLinkBlock"], [3, "previewBackground", "clickOnIconsBlock"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 15, vars: 17, consts: [[1, "topThreeBlocks"], [3, "headText", "headNav", "clickOnHeader"], [3, "productPresentation", "clickOnProductPresentation"], [3, "personalSecurityImg", "personalSecurity", "clickOnPersonalSecurity"], [3, "expenseManagementImg", "expenseManagement", "clickOnPersonalSecurity"], [3, "clauseMatch", "clickOnClauseMatch"], [3, "securityControlImg", "securityControl", "clickOnSecurityControl"], [3, "cardDesign", "clickOnCardDesign"], [3, "otherFeatures", "featuresblock", "clickOnOtherFeatures"], [3, "exploreFeatures", "clickOnExploreFeature"], [3, "linkBlock", "clickOnLinkBlock"], [3, "previewBackground", "clickOnIconsBlock"], [3, "footer"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "s-abdullakh-pre-header");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "s-abdullakh-header", 1);
@@ -286,7 +291,7 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "s-abdullakh-icons-block", 11);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickOnIconsBlock", function AppComponent_Template_s_abdullakh_icons_block_clickOnIconsBlock_13_listener($event) { return ctx.clickOnIconsBlock($event); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](14, "s-abdullakh-footer-block");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](14, "s-abdullakh-footer", 12);
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("headText", ctx.getheadText())("headNav", ctx.getheadNav());
@@ -310,6 +315,8 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("linkBlock", ctx.getlinkBlock());
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("previewBackground", ctx.getpreviewBackground());
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("footer", ctx.getfooter());
     } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
@@ -657,6 +664,80 @@ class ServiceStoreService {
                 }
             ]
         };
+        this.footer = [
+            [
+                {
+                    menuTitle: 'PERSONAL',
+                    menuTitleActive: 'BUSINESS'
+                }
+            ],
+            [
+                {
+                    title: 'PRODUCT',
+                    id: 'PRODUCT',
+                    items: [
+                        { id: 'Product tour', linkName: 'Product tour' },
+                        { id: 'For accountants', linkName: 'For accountants' },
+                        { id: 'Pricing', linkName: 'Pricing' }
+                    ]
+                },
+            ],
+            [
+                {
+                    title: 'FEATURES',
+                    id: 'FEATURES',
+                    items: [
+                        { id: 'Accounts', linkName: 'Accounts' },
+                        { id: 'Payments', linkName: 'Payments' },
+                    ]
+                },
+                {
+                    title: 'Company cards',
+                    id: 'Company cards',
+                    items: [
+                        { id: 'Roles & Permissions', linkName: 'Roles & Permissions' },
+                        { id: 'API & Integrations', linkName: 'API & Integrations' },
+                        { id: 'Mobile app', linkName: 'Mobile app' },
+                        { id: 'Security', linkName: 'Security' },
+                        { id: 'Perks', linkName: 'Perks' },
+                    ]
+                },
+            ],
+            [
+                {
+                    title: 'Resources',
+                    id: 'Resources',
+                    items: [
+                        { id: 'Blog', linkName: 'Blog' },
+                        { id: 'Community', linkName: 'Community' },
+                        { id: 'Help centre', linkName: 'Help centre' },
+                        { id: 'Webinar', linkName: 'Webinar' }
+                    ]
+                },
+            ],
+            [
+                {
+                    title: 'Company',
+                    items: [
+                        { id: 'About', linkName: 'About' },
+                        { id: 'Contact', linkName: 'Contact' },
+                        { id: 'Careers', linkName: 'Careers' }
+                    ]
+                }
+            ],
+            [
+                {
+                    title: 'FOLLOW',
+                    items: [
+                        { id: 'Facebook', linkName: 'Facebook' },
+                        { id: 'Instagram', linkName: 'Instagram' },
+                        { id: 'Twitter', linkName: 'Twitter' },
+                        { id: 'LinkedIn', linkName: 'LinkedIn' },
+                        { id: 'Dribbble', linkName: 'Dribbble' }
+                    ]
+                }
+            ]
+        ];
     }
     getheadText() {
         return this.headText;
@@ -693,6 +774,9 @@ class ServiceStoreService {
     }
     getpreviewBackground() {
         return this.previewBackground;
+    }
+    getfooter() {
+        return this.footer;
     }
 }
 ServiceStoreService.ɵfac = function ServiceStoreService_Factory(t) { return new (t || ServiceStoreService)(); };

@@ -108227,9 +108227,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var defineCustomElements = function defineCustomElements(win, options) {
       return Object(_index_5886095c_js__WEBPACK_IMPORTED_MODULE_0__["a"])().then(function () {
-        return Object(_index_5886095c_js__WEBPACK_IMPORTED_MODULE_0__["b"])([["my-component_27", [[0, "my-component"], [0, "s-abdullakh-header", {
+        return Object(_index_5886095c_js__WEBPACK_IMPORTED_MODULE_0__["b"])([["my-component_30", [[0, "my-component"], [0, "s-abdullakh-header", {
           "headText": [8, "head-text"],
           "headNav": [16]
+        }], [0, "s-abdullakh-footer", {
+          "footer": [16]
         }], [0, "s-abdullakh-product-presentation", {
           "productPresentation": [8, "product-presentation"]
         }], [0, "s-abdullakh-clause-match", {
@@ -108252,16 +108254,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           "securityControl": [8, "security-control"]
         }], [0, "s-abdullakh-card-design", {
           "cardDesign": [8, "card-design"]
-        }], [0, "s-abdullakh-footer-block"], [0, "s-abdullakh-link-block", {
+        }], [0, "s-abdullakh-link-block", {
           "linkBlock": [8, "link-block"]
         }], [0, "s-abdullakh-multi-currency-slaider", {
           "multiCurrencySlaider": [1, "multi-currency-slaider"]
         }], [0, "s-abdullakh-pre-header"], [0, "s-abdullakh-head-menu", {
           "headText": [8, "head-text"],
           "headNav": [16]
+        }], [0, "s-abdullakh-footer-menu-blocks", {
+          "arr": [8]
         }], [0, "s-abdullakh-clause-match-content", {
           "clauseMatch": [8, "clause-match"]
         }], [0, "s-abdullakh-explore-features-blocks", {
+          "arr": [8]
+        }], [0, "s-abdullakh-footer-logo-blocks", {
           "arr": [8]
         }], [0, "s-abdullakh-icons", {
           "arr": [8]
@@ -108273,6 +108279,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }], [0, "s-abdullakh-product-presentation-video", {
           "videoScr": [8, "video-scr"]
         }], [0, "s-abdullakh-head-menu-popup", {
+          "arr": [8]
+        }], [0, "s-abdullakh-footer-menu-links", {
           "arr": [8]
         }], [0, "s-abdullakh-head-nav-end", {
           "headText": [8, "head-text"]
