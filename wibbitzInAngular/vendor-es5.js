@@ -87683,8 +87683,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var defineCustomElements = function defineCustomElements(win, options) {
       return Object(_index_051815ee_js__WEBPACK_IMPORTED_MODULE_0__["a"])().then(function () {
-        return Object(_index_051815ee_js__WEBPACK_IMPORTED_MODULE_0__["b"])([["my-component_20", [[0, "my-component"], [0, "s-abdullakh-footer", {
+        return Object(_index_051815ee_js__WEBPACK_IMPORTED_MODULE_0__["b"])([["my-component_23", [[0, "my-component"], [0, "s-abdullakh-footer", {
           "footer": [8]
+        }], [0, "s-abdullakh-new-listiner", {
+          "newlistner": [16]
+        }], [0, "s-abdullakh-header", {
+          "menu": [16],
+          "theme": [4],
+          "logoUrl": [1, "logo-url"],
+          "searchSubscribe": [8, "search-subscribe"]
         }], [0, "s-abdullakh-news", {
           "newsImg": [1, "news-img"],
           "news": [16],
@@ -87696,23 +87703,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }], [0, "s-abdullakh-events", {
           "events": [16],
           "eventsTitle": [1, "events-title"]
-        }], [0, "s-abdullakh-header", {
-          "menu": [16],
-          "theme": [4],
-          "logoUrl": [1, "logo-url"],
-          "subscribeText": [1, "subscribe-text"]
-        }], [0, "s-abdullakh-new-listiner", {
-          "newlistner": [16]
         }], [0, "s-abdullakh-new-post", {
           "newPost": [16],
           "newPostTitle": [1, "new-post-title"]
         }], [0, "s-abdullakh-app-blog", {
           "p": [8]
+        }], [0, "s-abdullakh-listiner", {
+          "arr": [8]
         }], [0, "s-abdullakh-footer-icon-block", {
           "arr": [8]
         }], [0, "s-abdullakh-footer-menu", {
-          "arr": [8]
-        }], [0, "s-abdullakh-listiner", {
           "arr": [8]
         }], [0, "s-abdullakh-menu-item", {
           "arr": [8]
@@ -87723,11 +87723,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }], [0, "s-abdullakh-popular-resources-banner", {
           "arr": [8],
           "popularAsideTitle": [1, "popular-aside-title"]
+        }], [0, "s-abdullakh-search-subscribe", {
+          "arr": [8]
         }], [0, "s-abdullakh-sidebar", {
           "arr": [8]
         }], [0, "s-abdullakh-footer-icons", {
           "arr": [8]
         }], [0, "s-abdullakh-footer-links", {
+          "arr": [8]
+        }], [0, "s-abdullakh-listiner-form", {
+          "arr": [8]
+        }], [0, "s-abdullakh-listiner-title", {
           "arr": [8]
         }], [0, "s-abdullakh-new-single-post", {
           "arr": [8]

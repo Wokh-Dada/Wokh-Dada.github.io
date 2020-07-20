@@ -31,9 +31,9 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./my-component_20.entry.js": [
-		"./node_modules/abdullakh-wibbitz-v2/dist/esm/my-component_20.entry.js",
-		"stencil-my-component_20-entry-js"
+	"./my-component_23.entry.js": [
+		"./node_modules/abdullakh-wibbitz-v2/dist/esm/my-component_23.entry.js",
+		"stencil-my-component_23-entry-js"
 	]
 };
 function webpackAsyncContext(req) {
@@ -153,7 +153,6 @@ class AppComponent {
      * клик по элементам Toggle theme
      */
     clickOnSwitchTheme({ detail }) {
-        console.log('clickOnSwitchTheme:', detail.target.id);
         if (detail.target.id === 'theme_1') {
             this.router.navigate(['']);
         }
@@ -164,8 +163,8 @@ class AppComponent {
     /**
      * текст кнопки header
      * */
-    subscribeText() {
-        return this.headerStore.getHeaderItems().subscribeText;
+    searchSubscribe() {
+        return this.headerStore.getHeaderItems().searchSubscribe;
     }
     /**
      * клик по элементам Header
@@ -188,7 +187,7 @@ class AppComponent {
     }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_service_service__WEBPACK_IMPORTED_MODULE_1__["ServiceService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"])); };
-AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 3, vars: 5, consts: [[3, "logoUrl", "menu", "theme", "subscribeText", "clickOnTheme", "clickOnHeader", "clickOnSwitchTheme"], [3, "footer", "clickOnFooter"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 3, vars: 5, consts: [[3, "logoUrl", "menu", "theme", "searchSubscribe", "clickOnTheme", "clickOnHeader", "clickOnSwitchTheme"], [3, "footer", "clickOnFooter"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "s-abdullakh-header", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickOnTheme", function AppComponent_Template_s_abdullakh_header_clickOnTheme_0_listener() { return ctx.clickOnTheme(); })("clickOnHeader", function AppComponent_Template_s_abdullakh_header_clickOnHeader_0_listener($event) { return ctx.clickOnHeader($event); })("clickOnSwitchTheme", function AppComponent_Template_s_abdullakh_header_clickOnSwitchTheme_0_listener($event) { return ctx.clickOnSwitchTheme($event); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -197,7 +196,7 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickOnFooter", function AppComponent_Template_s_abdullakh_footer_clickOnFooter_2_listener($event) { return ctx.clickOnFooter($event); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("logoUrl", ctx.logo())("menu", ctx.menu())("theme", ctx.theme)("subscribeText", ctx.subscribeText());
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("logoUrl", ctx.logo())("menu", ctx.menu())("theme", ctx.theme)("searchSubscribe", ctx.searchSubscribe());
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("footer", ctx.footer());
     } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterOutlet"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"] });
@@ -488,7 +487,9 @@ class ServiceService {
                 { id: 'Reports', linkName: 'Reports' },
                 { id: 'Costumer Stories', linkName: 'Costumer Stories' }
             ],
-            subscribeText: 'Subscribe',
+            searchSubscribe: [
+                { searchIcon: 'search', subscribeText: 'Subscribe' }
+            ]
         };
         this.firstPage = {
             newsImg: "https://images.unsplash.com/photo-1589400369397-3363f6afeada?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
@@ -604,11 +605,19 @@ class ServiceService {
             ],
             newlistner: [
                 {
-                    title: 'Ready to take a test drive?',
-                    subtitle: 'We`ll help you elevate strategy. Prices starting from $49 a month.',
-                    linkText: 'See pricing',
-                    btnText: 'Try it Free',
-                    theme: true
+                    listnerTitle: [
+                        {
+                            title: 'Ready to take a test drive?',
+                            subtitle: 'We`ll help you elevate strategy. Prices starting from $49 a month.',
+                            linkText: 'See pricing',
+                        }
+                    ],
+                    listnerBtn: [
+                        {
+                            btnText: 'Try it Free',
+                            theme: true
+                        }
+                    ],
                 }
             ]
         };

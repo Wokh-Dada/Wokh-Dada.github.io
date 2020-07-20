@@ -73566,9 +73566,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/s-abdullakh-botdevelopmentapp/dist/esm/index-2038eb00.js":
+/***/ "./node_modules/s-abdullakh-botdevelopmentapp/dist/esm/index-71092e0e.js":
 /*!*******************************************************************************!*\
-  !*** ./node_modules/s-abdullakh-botdevelopmentapp/dist/esm/index-2038eb00.js ***!
+  !*** ./node_modules/s-abdullakh-botdevelopmentapp/dist/esm/index-71092e0e.js ***!
   \*******************************************************************************/
 /*! exports provided: a, b, c, h, p, r */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -73583,6 +73583,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return registerInstance; });
 const NAMESPACE = 'botdevelopmentapp';
 
+let scopeId;
 let isSvgMode = false;
 let queuePending = false;
 const win = typeof window !== 'undefined' ? window : {};
@@ -73680,8 +73681,23 @@ const addStyle = (styleContainerNode, cmpMeta, mode, hostElm) => {
 const attachStyles = (hostRef) => {
     const cmpMeta = hostRef.$cmpMeta$;
     const elm = hostRef.$hostElement$;
+    const flags = cmpMeta.$flags$;
     const endAttachStyles = createTime('attachStyles', cmpMeta.$tagName$);
     const scopeId = addStyle( elm.getRootNode(), cmpMeta, hostRef.$modeName$, elm);
+    if ( flags & 10 /* needsScopedEncapsulation */) {
+        // only required when we're NOT using native shadow dom (slot)
+        // or this browser doesn't support native shadow dom
+        // and this host element was NOT created with SSR
+        // let's pick out the inner content for slot projection
+        // create a node to represent where the original
+        // content was first placed, which is useful later on
+        // DOM WRITE!!
+        elm['s-sc'] = scopeId;
+        elm.classList.add(scopeId + '-h');
+        if ( flags & 2 /* scopedCssEncapsulation */) {
+            elm.classList.add(scopeId + '-s');
+        }
+    }
     endAttachStyles();
 };
 const getScopeId = (tagName, mode) => 'sc-' + ( tagName);
@@ -73693,6 +73709,7 @@ const getScopeId = (tagName, mode) => 'sc-' + ( tagName);
  * Don't add values to these!!
  */
 const EMPTY_OBJ = {};
+const isDef = (v) => v != null;
 const isComplexType = (o) => {
     // https://jsperf.com/typeof-fn-object/5
     o = typeof o;
@@ -73844,6 +73861,12 @@ const setAccessor = (elm, memberName, oldValue, newValue, isSvg, flags) => {
                 }
             }
         }
+        else if ( memberName === 'ref') {
+            // minifier will clean this up
+            if (newValue) {
+                newValue(elm);
+            }
+        }
         else if ( ( !isProp ) && memberName[0] === 'o' && memberName[1] === 'n') {
             // Event Handlers
             // so if the member name starts with "on" and the 3rd characters is
@@ -73956,6 +73979,11 @@ const createElm = (oldParentVNode, newParentVNode, childIndex, parentElm) => {
         {
             updateElement(null, newVNode, isSvgMode);
         }
+        if ( isDef(scopeId) && elm['s-si'] !== scopeId) {
+            // if there is a scopeId and this is the initial render
+            // then let's add the scopeId as a css class
+            elm.classList.add((elm['s-si'] = scopeId));
+        }
         if (newVNode.$children$) {
             for (i = 0; i < newVNode.$children$.length; ++i) {
                 // create the node
@@ -73987,6 +74015,7 @@ const removeVnodes = (vnodes, startIdx, endIdx, vnode, elm) => {
     for (; startIdx <= endIdx; ++startIdx) {
         if ((vnode = vnodes[startIdx])) {
             elm = vnode.$elm$;
+            callNodeRefs(vnode);
             // remove the vnode's element from the dom
             elm.remove();
         }
@@ -74105,6 +74134,12 @@ const patch = (oldVNode, newVNode) => {
         elm.data = text;
     }
 };
+const callNodeRefs = (vNode) => {
+    {
+        vNode.$attrs$ && vNode.$attrs$.ref && vNode.$attrs$.ref(null);
+        vNode.$children$ && vNode.$children$.map(callNodeRefs);
+    }
+};
 const renderVdom = (hostRef, renderFnResults) => {
     const hostElm = hostRef.$hostElement$;
     const oldVNode = hostRef.$vnode$ || newVNode(null, null);
@@ -74113,6 +74148,9 @@ const renderVdom = (hostRef, renderFnResults) => {
     rootVnode.$flags$ |= 4 /* isHost */;
     hostRef.$vnode$ = rootVnode;
     rootVnode.$elm$ = oldVNode.$elm$ = ( hostElm);
+    {
+        scopeId = hostElm['s-sc'];
+    }
     // synchronous patch
     patch(oldVNode, rootVnode);
 };
@@ -74154,6 +74192,11 @@ const scheduleUpdate = (hostRef, isInitialLoad) => {
     const update = () => updateComponent(hostRef, instance, isInitialLoad);
     attachToAncestor(hostRef, ancestorComponent);
     let promise;
+    if (isInitialLoad) {
+        {
+            promise = safeCall(instance, 'componentWillLoad');
+        }
+    }
     endSchedule();
     // there is no ancestorc omponent or the ancestor component
     // has already fired off its lifecycle update then
@@ -74222,12 +74265,16 @@ const postUpdateComponent = (hostRef) => {
     const tagName = hostRef.$cmpMeta$.$tagName$;
     const elm = hostRef.$hostElement$;
     const endPostUpdate = createTime('postUpdate', tagName);
+    const instance =  hostRef.$lazyInstance$ ;
     const ancestorComponent = hostRef.$ancestorComponent$;
     if (!(hostRef.$flags$ & 64 /* hasLoadedComponent */)) {
         hostRef.$flags$ |= 64 /* hasLoadedComponent */;
         {
             // DOM WRITE!
             addHydratedFlag(elm);
+        }
+        {
+            safeCall(instance, 'componentDidLoad');
         }
         endPostUpdate();
         {
@@ -74274,6 +74321,17 @@ const appDidLoad = (who) => {
         addHydratedFlag(doc.documentElement);
     }
     nextTick(() => emitEvent(win, 'appload', { detail: { namespace: NAMESPACE } }));
+};
+const safeCall = (instance, method, arg) => {
+    if (instance && instance[method]) {
+        try {
+            return instance[method](arg);
+        }
+        catch (e) {
+            consoleError(e);
+        }
+    }
+    return undefined;
 };
 const then = (promise, thenFn) => {
     return promise && promise.then ? promise.then(thenFn) : thenFn();
@@ -74471,9 +74529,13 @@ const connectedCallback = (elm) => {
 const disconnectedCallback = (elm) => {
     if ((plt.$flags$ & 1 /* isTmpDisconnected */) === 0) {
         const hostRef = getHostRef(elm);
+        const instance =  hostRef.$lazyInstance$ ;
         // clear CSS var-shim tracking
         if ( plt.$cssShim$) {
             plt.$cssShim$.removeHost(elm);
+        }
+        {
+            safeCall(instance, 'disconnectedCallback');
         }
     }
 };
@@ -74737,11 +74799,11 @@ const patchDynamicImport = (base, orgScriptElm) => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "defineCustomElements", function() { return defineCustomElements; });
-/* harmony import */ var _index_2038eb00_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-2038eb00.js */ "./node_modules/s-abdullakh-botdevelopmentapp/dist/esm/index-2038eb00.js");
+/* harmony import */ var _index_71092e0e_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-71092e0e.js */ "./node_modules/s-abdullakh-botdevelopmentapp/dist/esm/index-71092e0e.js");
 
 
-const defineCustomElements = (win, options) => Object(_index_2038eb00_js__WEBPACK_IMPORTED_MODULE_0__["a"])().then(() => {
-  return Object(_index_2038eb00_js__WEBPACK_IMPORTED_MODULE_0__["b"])([["my-component_20",[[0,"my-component"],[0,"s-abdullakh-header",{"header":[16]}],[0,"s-abdullakh-product-presentation",{"ProductPresentation":[16]}],[0,"s-abdullakh-transition-create-bot",{"TransitionCreateBot":[16]}],[0,"s-abdullakh-benefits-bots",{"BenefitsBots":[16]}],[0,"s-abdullakh-performance-information",{"PerformanceInformation":[16]}],[0,"s-abdullakh-product-information",{"ProductInformation":[16]}],[0,"s-abdullakh-tariffs",{"Tariffs":[8,"tariffs"]}],[0,"s-abdullakh-consultation",{"Consultation":[16]}],[0,"s-abdullakh-product-presentation-title",{"arr":[8],"img":[1]}],[0,"s-abdullakh-benefits-bots-block",{"arr":[8]}],[0,"s-abdullakh-header-center",{"arr":[16]}],[0,"s-abdullakh-header-end",{"phoneNumber":[1,"phone-number"]}],[0,"s-abdullakh-header-start",{"logo":[8]}],[0,"s-abdullakh-performance-information-list",{"PerformanceInformation":[8,"performance-information"],"endText":[1,"end-text"]}],[0,"s-abdullakh-product-information-blocks",{"arr":[8]}],[0,"s-abdullakh-tariffs-info-blocks",{"arr":[8]}],[0,"s-abdullakh-transition-create-bot-follow",{"arr":[8]}],[0,"s-abdullakh-transition-create-bot-title",{"arr":[8]}],[0,"s-abdullakh-product-presentation-img",{"img":[8]}]]]], options);
+const defineCustomElements = (win, options) => Object(_index_71092e0e_js__WEBPACK_IMPORTED_MODULE_0__["a"])().then(() => {
+  return Object(_index_71092e0e_js__WEBPACK_IMPORTED_MODULE_0__["b"])([["cnt-flexy-view-abdullakh-bot-benefits-bots_35",[[2,"my-component",{"popupComplited":[32]}],[2,"cnt-flexy-view-abdullakh-bot-performance-and-benefits-1_01",{"payload":[8],"pathToAssets":[1,"path-to-assets"]}],[2,"cnt-flexy-view-abdullakh-bot-form-communication-1_01",{"payload":[8],"pathToAssets":[1,"path-to-assets"]}],[2,"cnt-flexy-view-abdullakh-bot-header-1_01",{"categories":[8],"pathToAssets":[1,"path-to-assets"]}],[2,"cnt-flexy-view-abdullakh-bot-product-presentation-1_01",{"payload":[8],"pathToAssets":[1,"path-to-assets"]}],[2,"cnt-flexy-view-abdullakh-bot-transition-create-bot-1_01",{"payload":[8],"pathToAssets":[1,"path-to-assets"]}],[0,"cnt-flexy-view-abdullakh-bot-product-information-1_01",{"payload":[8],"pathToAssets":[1,"path-to-assets"]}],[2,"cnt-flexy-view-abdullakh-bot-tariffs-1_01",{"payload":[8],"pathToAssets":[1,"path-to-assets"]}],[2,"cnt-flexy-view-abdullakh-bot-consultation-1_01",{"payload":[8],"pathToAssets":[1,"path-to-assets"]}],[2,"cnt-flexy-view-abdullakh-universal-footer-1_01",{"categories":[8],"pathToAssets":[1,"path-to-assets"]}],[2,"cnt-flexy-view-abdullakh-bot-performance-and-benefits_",{"payload":[8]}],[2,"cnt-flexy-view-abdullakh-bot-form-communication_",{"payload":[16]}],[2,"cnt-flexy-view-abdullakh-bot-header_",{"categories":[16]}],[2,"cnt-flexy-view-abdullakh-bot-product-presentation_",{"payload":[16]}],[2,"cnt-flexy-view-abdullakh-bot-transition-create-bot_",{"payload":[16]}],[2,"cnt-flexy-view-abdullakh-bot-product-information_",{"ProductInformation":[16]}],[2,"cnt-flexy-view-abdullakh-bot-tariffs_",{"payload":[8]}],[2,"cnt-flexy-view-abdullakh-bot-consultation_",{"payload":[16]}],[2,"cnt-flexy-view-abdullakh-universal-footer_",{"footerIcons":[8,"footer-icons"]}],[2,"cnt-flexy-view-abdullakh-bot-benefits-bots",{"BenefitsBots":[16]}],[2,"cnt-flexy-view-abdullakh-bot-form",{"arr":[16]}],[2,"cnt-flexy-view-abdullakh-bot-performance-information",{"PerformanceInformation":[16]}],[2,"cnt-flexy-view-abdullakh-bot-product-presentation-title",{"arr":[8],"img":[1]}],[2,"cnt-flexy-view-abdullakh-bot-form-close"],[2,"cnt-flexy-view-abdullakh-bot-header-center",{"arr":[16]}],[2,"cnt-flexy-view-abdullakh-bot-header-end",{"phoneNumber":[1,"phone-number"]}],[2,"cnt-flexy-view-abdullakh-bot-header-start",{"logo":[8]}],[2,"cnt-flexy-view-abdullakh-bot-product-information-blocks",{"arr":[8]}],[2,"cnt-flexy-view-abdullakh-bot-tariffs-info-blocks",{"arr":[8]}],[2,"cnt-flexy-view-abdullakh-bot-transition-create-bot-follow",{"arr":[8]}],[2,"cnt-flexy-view-abdullakh-bot-transition-create-bot-title",{"arr":[8]}],[2,"cnt-flexy-view-abdullakh-bot-benefits-bots-block",{"arr":[8]}],[2,"cnt-flexy-view-abdullakh-bot-form-input",{"phoneMask":[8,"phone-mask"],"phoneCodeSelect":[32],"idCountry":[32]}],[2,"cnt-flexy-view-abdullakh-bot-performance-information-list",{"PerformanceInformation":[8,"performance-information"],"endText":[1,"end-text"]}],[2,"cnt-flexy-view-abdullakh-bot-product-presentation-img",{"img":[8]}]]]], options);
 });
 
 

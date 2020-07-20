@@ -46,7 +46,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   /***/
   function node_modulesAbdullakhWibbitzV2DistEsmLazyRecursiveEntryJs$IncludeEntryJs$ExcludeSystemEntryJs$(module, exports, __webpack_require__) {
     var map = {
-      "./my-component_20.entry.js": ["./node_modules/abdullakh-wibbitz-v2/dist/esm/my-component_20.entry.js", "stencil-my-component_20-entry-js"]
+      "./my-component_23.entry.js": ["./node_modules/abdullakh-wibbitz-v2/dist/esm/my-component_23.entry.js", "stencil-my-component_23-entry-js"]
     };
 
     function webpackAsyncContext(req) {
@@ -248,7 +248,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "clickOnSwitchTheme",
         value: function clickOnSwitchTheme(_ref) {
           var detail = _ref.detail;
-          console.log('clickOnSwitchTheme:', detail.target.id);
 
           if (detail.target.id === 'theme_1') {
             this.router.navigate(['']);
@@ -261,9 +260,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
          * */
 
       }, {
-        key: "subscribeText",
-        value: function subscribeText() {
-          return this.headerStore.getHeaderItems().subscribeText;
+        key: "searchSubscribe",
+        value: function searchSubscribe() {
+          return this.headerStore.getHeaderItems().searchSubscribe;
         }
         /**
          * клик по элементам Header
@@ -310,7 +309,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       selectors: [["app-root"]],
       decls: 3,
       vars: 5,
-      consts: [[3, "logoUrl", "menu", "theme", "subscribeText", "clickOnTheme", "clickOnHeader", "clickOnSwitchTheme"], [3, "footer", "clickOnFooter"]],
+      consts: [[3, "logoUrl", "menu", "theme", "searchSubscribe", "clickOnTheme", "clickOnHeader", "clickOnSwitchTheme"], [3, "footer", "clickOnFooter"]],
       template: function AppComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "s-abdullakh-header", 0);
@@ -337,7 +336,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
 
         if (rf & 2) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("logoUrl", ctx.logo())("menu", ctx.menu())("theme", ctx.theme)("subscribeText", ctx.subscribeText());
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("logoUrl", ctx.logo())("menu", ctx.menu())("theme", ctx.theme)("searchSubscribe", ctx.searchSubscribe());
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
@@ -907,7 +906,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             id: 'Costumer Stories',
             linkName: 'Costumer Stories'
           }],
-          subscribeText: 'Subscribe'
+          searchSubscribe: [{
+            searchIcon: 'search',
+            subscribeText: 'Subscribe'
+          }]
         };
         this.firstPage = {
           newsImg: "https://images.unsplash.com/photo-1589400369397-3363f6afeada?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
@@ -1001,11 +1003,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             btnText: 'Read Report'
           }],
           newlistner: [{
-            title: 'Ready to take a test drive?',
-            subtitle: 'We`ll help you elevate strategy. Prices starting from $49 a month.',
-            linkText: 'See pricing',
-            btnText: 'Try it Free',
-            theme: true
+            listnerTitle: [{
+              title: 'Ready to take a test drive?',
+              subtitle: 'We`ll help you elevate strategy. Prices starting from $49 a month.',
+              linkText: 'See pricing'
+            }],
+            listnerBtn: [{
+              btnText: 'Try it Free',
+              theme: true
+            }]
           }]
         };
         this.blog = {

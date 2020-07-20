@@ -106577,15 +106577,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
-  "./node_modules/s-abdullakh-botdevelopmentapp/dist/esm/index-2038eb00.js":
+  "./node_modules/s-abdullakh-botdevelopmentapp/dist/esm/index-71092e0e.js":
   /*!*******************************************************************************!*\
-    !*** ./node_modules/s-abdullakh-botdevelopmentapp/dist/esm/index-2038eb00.js ***!
+    !*** ./node_modules/s-abdullakh-botdevelopmentapp/dist/esm/index-71092e0e.js ***!
     \*******************************************************************************/
 
   /*! exports provided: a, b, c, h, p, r */
 
   /***/
-  function node_modulesSAbdullakhBotdevelopmentappDistEsmIndex2038eb00Js(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesSAbdullakhBotdevelopmentappDistEsmIndex71092e0eJs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
@@ -106627,6 +106627,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     });
 
     var NAMESPACE = 'botdevelopmentapp';
+    var scopeId;
     var isSvgMode = false;
     var queuePending = false;
     var win = typeof window !== 'undefined' ? window : {};
@@ -106755,8 +106756,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var attachStyles = function attachStyles(hostRef) {
       var cmpMeta = hostRef.$cmpMeta$;
       var elm = hostRef.$hostElement$;
+      var flags = cmpMeta.$flags$;
       var endAttachStyles = createTime('attachStyles', cmpMeta.$tagName$);
       var scopeId = addStyle(elm.getRootNode(), cmpMeta, hostRef.$modeName$, elm);
+
+      if (flags & 10
+      /* needsScopedEncapsulation */
+      ) {
+          // only required when we're NOT using native shadow dom (slot)
+          // or this browser doesn't support native shadow dom
+          // and this host element was NOT created with SSR
+          // let's pick out the inner content for slot projection
+          // create a node to represent where the original
+          // content was first placed, which is useful later on
+          // DOM WRITE!!
+          elm['s-sc'] = scopeId;
+          elm.classList.add(scopeId + '-h');
+
+          if (flags & 2
+          /* scopedCssEncapsulation */
+          ) {
+              elm.classList.add(scopeId + '-s');
+            }
+        }
+
       endAttachStyles();
     };
 
@@ -106774,6 +106797,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var EMPTY_OBJ = {};
+
+    var isDef = function isDef(v) {
+      return v != null;
+    };
 
     var isComplexType = function isComplexType(o) {
       // https://jsperf.com/typeof-fn-object/5
@@ -106956,6 +106983,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             }
           }
+        } else if (memberName === 'ref') {
+          // minifier will clean this up
+          if (newValue) {
+            newValue(elm);
+          }
         } else if (!isProp && memberName[0] === 'o' && memberName[1] === 'n') {
           // Event Handlers
           // so if the member name starts with "on" and the 3rd characters is
@@ -107075,6 +107107,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           updateElement(null, newVNode, isSvgMode);
         }
 
+        if (isDef(scopeId) && elm['s-si'] !== scopeId) {
+          // if there is a scopeId and this is the initial render
+          // then let's add the scopeId as a css class
+          elm.classList.add(elm['s-si'] = scopeId);
+        }
+
         if (newVNode.$children$) {
           for (i = 0; i < newVNode.$children$.length; ++i) {
             // create the node
@@ -107110,7 +107148,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var removeVnodes = function removeVnodes(vnodes, startIdx, endIdx, vnode, elm) {
       for (; startIdx <= endIdx; ++startIdx) {
         if (vnode = vnodes[startIdx]) {
-          elm = vnode.$elm$; // remove the vnode's element from the dom
+          elm = vnode.$elm$;
+          callNodeRefs(vnode); // remove the vnode's element from the dom
 
           elm.remove();
         }
@@ -107228,6 +107267,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     };
 
+    var callNodeRefs = function callNodeRefs(vNode) {
+      {
+        vNode.$attrs$ && vNode.$attrs$.ref && vNode.$attrs$.ref(null);
+        vNode.$children$ && vNode.$children$.map(callNodeRefs);
+      }
+    };
+
     var renderVdom = function renderVdom(hostRef, renderFnResults) {
       var hostElm = hostRef.$hostElement$;
       var oldVNode = hostRef.$vnode$ || newVNode(null, null);
@@ -107237,7 +107283,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /* isHost */
       ;
       hostRef.$vnode$ = rootVnode;
-      rootVnode.$elm$ = oldVNode.$elm$ = hostElm; // synchronous patch
+      rootVnode.$elm$ = oldVNode.$elm$ = hostElm;
+      {
+        scopeId = hostElm['s-sc'];
+      } // synchronous patch
 
       patch(oldVNode, rootVnode);
     };
@@ -107306,6 +107355,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       attachToAncestor(hostRef, ancestorComponent);
       var promise;
+
+      if (isInitialLoad) {
+        {
+          promise = safeCall(instance, 'componentWillLoad');
+        }
+      }
+
       endSchedule(); // there is no ancestorc omponent or the ancestor component
       // has already fired off its lifecycle update then
       // fire off the initial update
@@ -107396,6 +107452,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var tagName = hostRef.$cmpMeta$.$tagName$;
       var elm = hostRef.$hostElement$;
       var endPostUpdate = createTime('postUpdate', tagName);
+      var instance = hostRef.$lazyInstance$;
       var ancestorComponent = hostRef.$ancestorComponent$;
 
       if (!(hostRef.$flags$ & 64
@@ -107407,6 +107464,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         {
           // DOM WRITE!
           addHydratedFlag(elm);
+        }
+        {
+          safeCall(instance, 'componentDidLoad');
         }
         endPostUpdate();
         {
@@ -107479,6 +107539,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
         });
       });
+    };
+
+    var safeCall = function safeCall(instance, method, arg) {
+      if (instance && instance[method]) {
+        try {
+          return instance[method](arg);
+        } catch (e) {
+          consoleError(e);
+        }
+      }
+
+      return undefined;
     };
 
     var then = function then(promise, thenFn) {
@@ -107622,7 +107694,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var initializeComponent = /*#__PURE__*/function () {
       var _ref22 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(elm, hostRef, cmpMeta, hmrVersionId, Cstr) {
-        var endLoad, endNewInstance, scopeId, endRegisterStyles, style, ancestorComponent, schedule;
+        var endLoad, endNewInstance, _scopeId, endRegisterStyles, style, ancestorComponent, schedule;
+
         return regeneratorRuntime.wrap(function _callee$(_context4) {
           while (1) {
             switch (_context4.prev = _context4.next) {
@@ -107687,13 +107760,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 /* isConstructingInstance */
                 ;
                 endNewInstance();
-                scopeId = getScopeId(cmpMeta.$tagName$);
+                _scopeId = getScopeId(cmpMeta.$tagName$);
 
-                if (!styles.has(scopeId) && Cstr.style) {
+                if (!styles.has(_scopeId) && Cstr.style) {
                   endRegisterStyles = createTime('registerStyles', cmpMeta.$tagName$); // this component has styles but we haven't registered them yet
 
                   style = Cstr.style;
-                  registerStyle(scopeId, style, !!(cmpMeta.$flags$ & 1
+                  registerStyle(_scopeId, style, !!(cmpMeta.$flags$ & 1
                   /* shadowDomEncapsulation */
                   ));
                   endRegisterStyles();
@@ -107795,10 +107868,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if ((plt.$flags$ & 1
       /* isTmpDisconnected */
       ) === 0) {
-        var hostRef = getHostRef(elm); // clear CSS var-shim tracking
+        var hostRef = getHostRef(elm);
+        var instance = hostRef.$lazyInstance$; // clear CSS var-shim tracking
 
         if (plt.$cssShim$) {
           plt.$cssShim$.removeHost(elm);
+        }
+
+        {
+          safeCall(instance, 'disconnectedCallback');
         }
       }
     };
@@ -108173,51 +108251,92 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _index_2038eb00_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! ./index-2038eb00.js */
-    "./node_modules/s-abdullakh-botdevelopmentapp/dist/esm/index-2038eb00.js");
+    var _index_71092e0e_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! ./index-71092e0e.js */
+    "./node_modules/s-abdullakh-botdevelopmentapp/dist/esm/index-71092e0e.js");
 
     var defineCustomElements = function defineCustomElements(win, options) {
-      return Object(_index_2038eb00_js__WEBPACK_IMPORTED_MODULE_0__["a"])().then(function () {
-        return Object(_index_2038eb00_js__WEBPACK_IMPORTED_MODULE_0__["b"])([["my-component_20", [[0, "my-component"], [0, "s-abdullakh-header", {
-          "header": [16]
-        }], [0, "s-abdullakh-product-presentation", {
-          "ProductPresentation": [16]
-        }], [0, "s-abdullakh-transition-create-bot", {
-          "TransitionCreateBot": [16]
-        }], [0, "s-abdullakh-benefits-bots", {
-          "BenefitsBots": [16]
-        }], [0, "s-abdullakh-performance-information", {
-          "PerformanceInformation": [16]
-        }], [0, "s-abdullakh-product-information", {
+      return Object(_index_71092e0e_js__WEBPACK_IMPORTED_MODULE_0__["a"])().then(function () {
+        return Object(_index_71092e0e_js__WEBPACK_IMPORTED_MODULE_0__["b"])([["cnt-flexy-view-abdullakh-bot-benefits-bots_35", [[2, "my-component", {
+          "popupComplited": [32]
+        }], [2, "cnt-flexy-view-abdullakh-bot-performance-and-benefits-1_01", {
+          "payload": [8],
+          "pathToAssets": [1, "path-to-assets"]
+        }], [2, "cnt-flexy-view-abdullakh-bot-form-communication-1_01", {
+          "payload": [8],
+          "pathToAssets": [1, "path-to-assets"]
+        }], [2, "cnt-flexy-view-abdullakh-bot-header-1_01", {
+          "categories": [8],
+          "pathToAssets": [1, "path-to-assets"]
+        }], [2, "cnt-flexy-view-abdullakh-bot-product-presentation-1_01", {
+          "payload": [8],
+          "pathToAssets": [1, "path-to-assets"]
+        }], [2, "cnt-flexy-view-abdullakh-bot-transition-create-bot-1_01", {
+          "payload": [8],
+          "pathToAssets": [1, "path-to-assets"]
+        }], [0, "cnt-flexy-view-abdullakh-bot-product-information-1_01", {
+          "payload": [8],
+          "pathToAssets": [1, "path-to-assets"]
+        }], [2, "cnt-flexy-view-abdullakh-bot-tariffs-1_01", {
+          "payload": [8],
+          "pathToAssets": [1, "path-to-assets"]
+        }], [2, "cnt-flexy-view-abdullakh-bot-consultation-1_01", {
+          "payload": [8],
+          "pathToAssets": [1, "path-to-assets"]
+        }], [2, "cnt-flexy-view-abdullakh-universal-footer-1_01", {
+          "categories": [8],
+          "pathToAssets": [1, "path-to-assets"]
+        }], [2, "cnt-flexy-view-abdullakh-bot-performance-and-benefits_", {
+          "payload": [8]
+        }], [2, "cnt-flexy-view-abdullakh-bot-form-communication_", {
+          "payload": [16]
+        }], [2, "cnt-flexy-view-abdullakh-bot-header_", {
+          "categories": [16]
+        }], [2, "cnt-flexy-view-abdullakh-bot-product-presentation_", {
+          "payload": [16]
+        }], [2, "cnt-flexy-view-abdullakh-bot-transition-create-bot_", {
+          "payload": [16]
+        }], [2, "cnt-flexy-view-abdullakh-bot-product-information_", {
           "ProductInformation": [16]
-        }], [0, "s-abdullakh-tariffs", {
-          "Tariffs": [8, "tariffs"]
-        }], [0, "s-abdullakh-consultation", {
-          "Consultation": [16]
-        }], [0, "s-abdullakh-product-presentation-title", {
+        }], [2, "cnt-flexy-view-abdullakh-bot-tariffs_", {
+          "payload": [8]
+        }], [2, "cnt-flexy-view-abdullakh-bot-consultation_", {
+          "payload": [16]
+        }], [2, "cnt-flexy-view-abdullakh-universal-footer_", {
+          "footerIcons": [8, "footer-icons"]
+        }], [2, "cnt-flexy-view-abdullakh-bot-benefits-bots", {
+          "BenefitsBots": [16]
+        }], [2, "cnt-flexy-view-abdullakh-bot-form", {
+          "arr": [16]
+        }], [2, "cnt-flexy-view-abdullakh-bot-performance-information", {
+          "PerformanceInformation": [16]
+        }], [2, "cnt-flexy-view-abdullakh-bot-product-presentation-title", {
           "arr": [8],
           "img": [1]
-        }], [0, "s-abdullakh-benefits-bots-block", {
-          "arr": [8]
-        }], [0, "s-abdullakh-header-center", {
+        }], [2, "cnt-flexy-view-abdullakh-bot-form-close"], [2, "cnt-flexy-view-abdullakh-bot-header-center", {
           "arr": [16]
-        }], [0, "s-abdullakh-header-end", {
+        }], [2, "cnt-flexy-view-abdullakh-bot-header-end", {
           "phoneNumber": [1, "phone-number"]
-        }], [0, "s-abdullakh-header-start", {
+        }], [2, "cnt-flexy-view-abdullakh-bot-header-start", {
           "logo": [8]
-        }], [0, "s-abdullakh-performance-information-list", {
+        }], [2, "cnt-flexy-view-abdullakh-bot-product-information-blocks", {
+          "arr": [8]
+        }], [2, "cnt-flexy-view-abdullakh-bot-tariffs-info-blocks", {
+          "arr": [8]
+        }], [2, "cnt-flexy-view-abdullakh-bot-transition-create-bot-follow", {
+          "arr": [8]
+        }], [2, "cnt-flexy-view-abdullakh-bot-transition-create-bot-title", {
+          "arr": [8]
+        }], [2, "cnt-flexy-view-abdullakh-bot-benefits-bots-block", {
+          "arr": [8]
+        }], [2, "cnt-flexy-view-abdullakh-bot-form-input", {
+          "phoneMask": [8, "phone-mask"],
+          "phoneCodeSelect": [32],
+          "idCountry": [32]
+        }], [2, "cnt-flexy-view-abdullakh-bot-performance-information-list", {
           "PerformanceInformation": [8, "performance-information"],
           "endText": [1, "end-text"]
-        }], [0, "s-abdullakh-product-information-blocks", {
-          "arr": [8]
-        }], [0, "s-abdullakh-tariffs-info-blocks", {
-          "arr": [8]
-        }], [0, "s-abdullakh-transition-create-bot-follow", {
-          "arr": [8]
-        }], [0, "s-abdullakh-transition-create-bot-title", {
-          "arr": [8]
-        }], [0, "s-abdullakh-product-presentation-img", {
+        }], [2, "cnt-flexy-view-abdullakh-bot-product-presentation-img", {
           "img": [8]
         }]]]], options);
       });

@@ -46,7 +46,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   /***/
   function node_modulesSAbdullakhBotdevelopmentappDistEsmLazyRecursiveEntryJs$IncludeEntryJs$ExcludeSystemEntryJs$(module, exports, __webpack_require__) {
     var map = {
-      "./my-component_20.entry.js": ["./node_modules/s-abdullakh-botdevelopmentapp/dist/esm/my-component_20.entry.js", "stencil-my-component_20-entry-js"]
+      "./cnt-flexy-view-abdullakh-bot-benefits-bots_35.entry.js": ["./node_modules/s-abdullakh-botdevelopmentapp/dist/esm/cnt-flexy-view-abdullakh-bot-benefits-bots_35.entry.js", "stencil-cnt-flexy-view-abdullakh-bot-benefits-bots_35-entry-js"]
     };
 
     function webpackAsyncContext(req) {
@@ -182,153 +182,109 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
-    var _c0 = function _c0() {
-      return {
-        "backgroundImage": "url(https://static.tildacdn.com/tild3838-6433-4637-a435-313133666535/bg.svg)"
-      };
-    };
+    function AppComponent_cnt_flexy_view_abdullakh_bot_form_communication_1_01_1_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "cnt-flexy-view-abdullakh-bot-form-communication-1_01", 3);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("closeForm", function AppComponent_cnt_flexy_view_abdullakh_bot_form_communication_1_01_1_Template_cnt_flexy_view_abdullakh_bot_form_communication_1_01_closeForm_0_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r2);
+
+          var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+          return ctx_r1.closeForm();
+        });
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      }
+
+      if (rf & 2) {
+        var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("payload", ctx_r0.getFormCommunication())("pathToAssets", ctx_r0.testPathToAssetsRet());
+      }
+    }
 
     var AppComponent = /*#__PURE__*/function () {
       function AppComponent(botStore) {
         _classCallCheck(this, AppComponent);
 
         this.botStore = botStore;
+        /**
+         * временный префикс ссылки для картинок
+         */
+
+        this.testPathToAssets = "https://cdn.ramman.net/flexy-view/abdullakh/bot/1.01/assets/";
       }
       /**
-       * клик по элементам компонента header
+       * Вызов модального окна формы
        */
 
 
       _createClass(AppComponent, [{
-        key: "clickOnHeader",
-        value: function clickOnHeader(_ref) {
-          var detail = _ref.detail;
-          return console.log("clickOnHeader:", detail);
+        key: "openForm",
+        value: function openForm() {
+          this.popupComplited = true;
+        }
+        /**
+         * Закрытие модального окна формы
+         */
+
+      }, {
+        key: "closeForm",
+        value: function closeForm() {
+          this.popupComplited = false;
+        }
+      }, {
+        key: "testPathToAssetsRet",
+        value: function testPathToAssetsRet() {
+          return this.testPathToAssets;
+        }
+      }, {
+        key: "getFormCommunication",
+        value: function getFormCommunication() {
+          return this.botStore.getFormCommunication();
         }
       }, {
         key: "getHeader",
         value: function getHeader() {
           return this.botStore.getHeader();
         }
-        /**
-         * клик по элементам компонента product-presentation
-         */
-
-      }, {
-        key: "clickOnProductPresentation",
-        value: function clickOnProductPresentation(_ref2) {
-          var detail = _ref2.detail;
-          return console.log("clickOnProductPresentation:", detail);
-        }
       }, {
         key: "getProductPresentation",
         value: function getProductPresentation() {
           return this.botStore.getProductPresentation();
-        }
-        /**
-         * клик по элементам компонента product-information
-         */
-
-      }, {
-        key: "clickOnProductInformation",
-        value: function clickOnProductInformation(_ref3) {
-          var detail = _ref3.detail;
-          return console.log("clickOnProductInformation:", detail);
         }
       }, {
         key: "getProductInformation",
         value: function getProductInformation() {
           return this.botStore.getProductInformation();
         }
-        /**
-         * клик по элементам компонента product-presentation
-         */
-
-      }, {
-        key: "clickOnTransitionCreateBot",
-        value: function clickOnTransitionCreateBot(_ref4) {
-          var detail = _ref4.detail;
-          return console.log("clickOnTransitionCreateBot:", detail);
-        }
       }, {
         key: "getTransitionCreateBot",
         value: function getTransitionCreateBot() {
           return this.botStore.getTransitionCreateBot();
         }
-        /**
-         * клик по элементам блока PerformanceandBenefitsbckgrnd
-         */
-
       }, {
-        key: "PerformanceandBenefitsbckgrnd",
-        value: function PerformanceandBenefitsbckgrnd(_ref5) {
-          var detail = _ref5.detail;
-          return console.log("PerformanceandBenefitsbckgrnd:", detail);
-        }
-      }, {
-        key: "getPerformanceandBenefitsbckgrnd",
-        value: function getPerformanceandBenefitsbckgrnd() {
-          return this.botStore.getPerformanceandBenefitsbckgrnd();
-        }
-        /**
-         * клик по элементам компонента PerformanceInformation
-         */
-
-      }, {
-        key: "clickOnPerformanceInformation",
-        value: function clickOnPerformanceInformation(_ref6) {
-          var detail = _ref6.detail;
-          return console.log("PerformanceInformation:", detail);
-        }
-      }, {
-        key: "getPerformanceInformation",
-        value: function getPerformanceInformation() {
-          return this.botStore.getPerformanceInformation();
-        }
-        /**
-         * клик по элементам компонента BenefitsBots
-         */
-
-      }, {
-        key: "clickOnBenefitsBots",
-        value: function clickOnBenefitsBots(_ref7) {
-          var detail = _ref7.detail;
-          return console.log("BenefitsBots:", detail);
-        }
-      }, {
-        key: "getBenefitsBots",
-        value: function getBenefitsBots() {
-          return this.botStore.getBenefitsBots();
-        }
-        /**
-         * клик по элементам компонента Consultation
-         */
-
-      }, {
-        key: "clickOnConsultation",
-        value: function clickOnConsultation(_ref8) {
-          var detail = _ref8.detail;
-          return console.log("Consultation:", detail);
+        key: "getPerformanceAndBenefits",
+        value: function getPerformanceAndBenefits() {
+          return this.botStore.getPerformanceAndBenefits();
         }
       }, {
         key: "gethConsultation",
         value: function gethConsultation() {
           return this.botStore.gethConsultation();
         }
-        /**
-         * клик по элементам компонента Tariffs
-         */
-
       }, {
-        key: "clickOnTariffs",
-        value: function clickOnTariffs(_ref9) {
-          var detail = _ref9.detail;
-          return console.log("Tariffs:", detail);
+        key: "getTariffs",
+        value: function getTariffs() {
+          return this.botStore.getTariffs();
         }
       }, {
-        key: "gethTariffs",
-        value: function gethTariffs() {
-          return this.botStore.gethTariffs();
+        key: "getFooter",
+        value: function getFooter() {
+          return this.botStore.getFooter();
         }
       }]);
 
@@ -343,79 +299,65 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       type: AppComponent,
       selectors: [["app-root"]],
       decls: 10,
-      vars: 10,
-      consts: [[3, "header", "clickOnHeader"], [3, "ProductPresentation", "clickOnProductPresentation"], [3, "ProductInformation", "clickOnProductInformation"], [3, "TransitionCreateBot", "clickOnTransitionCreateBot"], [1, "PerformanceandBenefitsbckgrnd", 3, "ngStyle"], [3, "PerformanceInformation", "clickOnPerformanceInformation"], [3, "BenefitsBots", "clickOnBenefitsBots"], [3, "Consultation", "clickOnConsultation"], [3, "Tariffs", "clickOnTariffs"]],
+      vars: 17,
+      consts: [[3, "payload", "pathToAssets", "closeForm", 4, "ngIf"], [3, "categories", "pathToAssets"], [3, "payload", "pathToAssets", "openForm"], [3, "payload", "pathToAssets", "closeForm"]],
       template: function AppComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "s-abdullakh-header", 0);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, AppComponent_cnt_flexy_view_abdullakh_bot_form_communication_1_01_1_Template, 1, 2, "cnt-flexy-view-abdullakh-bot-form-communication-1_01", 0);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickOnHeader", function AppComponent_Template_s_abdullakh_header_clickOnHeader_1_listener($event) {
-            return ctx.clickOnHeader($event);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "cnt-flexy-view-abdullakh-bot-header-1_01", 1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "cnt-flexy-view-abdullakh-bot-product-presentation-1_01", 2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("openForm", function AppComponent_Template_cnt_flexy_view_abdullakh_bot_product_presentation_1_01_openForm_3_listener() {
+            return ctx.openForm();
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "s-abdullakh-product-presentation", 1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "cnt-flexy-view-abdullakh-bot-product-information-1_01", 2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickOnProductPresentation", function AppComponent_Template_s_abdullakh_product_presentation_clickOnProductPresentation_2_listener($event) {
-            return ctx.clickOnProductPresentation($event);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("openForm", function AppComponent_Template_cnt_flexy_view_abdullakh_bot_product_information_1_01_openForm_4_listener() {
+            return ctx.openForm();
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "s-abdullakh-product-information", 2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "cnt-flexy-view-abdullakh-bot-transition-create-bot-1_01", 2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickOnProductInformation", function AppComponent_Template_s_abdullakh_product_information_clickOnProductInformation_3_listener($event) {
-            return ctx.clickOnProductInformation($event);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("openForm", function AppComponent_Template_cnt_flexy_view_abdullakh_bot_transition_create_bot_1_01_openForm_5_listener() {
+            return ctx.openForm();
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "s-abdullakh-transition-create-bot", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "cnt-flexy-view-abdullakh-bot-performance-and-benefits-1_01", 2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickOnTransitionCreateBot", function AppComponent_Template_s_abdullakh_transition_create_bot_clickOnTransitionCreateBot_4_listener($event) {
-            return ctx.clickOnTransitionCreateBot($event);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("openForm", function AppComponent_Template_cnt_flexy_view_abdullakh_bot_performance_and_benefits_1_01_openForm_6_listener() {
+            return ctx.openForm();
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "cnt-flexy-view-abdullakh-bot-consultation-1_01", 2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "s-abdullakh-performance-information", 5);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickOnPerformanceInformation", function AppComponent_Template_s_abdullakh_performance_information_clickOnPerformanceInformation_6_listener($event) {
-            return ctx.clickOnPerformanceInformation($event);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("openForm", function AppComponent_Template_cnt_flexy_view_abdullakh_bot_consultation_1_01_openForm_7_listener() {
+            return ctx.openForm();
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "s-abdullakh-benefits-bots", 6);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "cnt-flexy-view-abdullakh-bot-tariffs-1_01", 2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickOnBenefitsBots", function AppComponent_Template_s_abdullakh_benefits_bots_clickOnBenefitsBots_7_listener($event) {
-            return ctx.clickOnBenefitsBots($event);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("openForm", function AppComponent_Template_cnt_flexy_view_abdullakh_bot_tariffs_1_01_openForm_8_listener() {
+            return ctx.openForm();
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "s-abdullakh-consultation", 7);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickOnConsultation", function AppComponent_Template_s_abdullakh_consultation_clickOnConsultation_8_listener($event) {
-            return ctx.clickOnConsultation($event);
-          });
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "s-abdullakh-tariffs", 8);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("clickOnTariffs", function AppComponent_Template_s_abdullakh_tariffs_clickOnTariffs_9_listener($event) {
-            return ctx.clickOnTariffs($event);
-          });
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "cnt-flexy-view-abdullakh-universal-footer-1_01", 1);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
@@ -423,42 +365,42 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         if (rf & 2) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("header", ctx.getHeader());
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.popupComplited);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ProductPresentation", ctx.getProductPresentation());
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("categories", ctx.getHeader())("pathToAssets", ctx.testPathToAssetsRet());
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ProductInformation", ctx.getProductInformation());
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("payload", ctx.getProductPresentation())("pathToAssets", ctx.testPathToAssetsRet());
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("TransitionCreateBot", ctx.getTransitionCreateBot());
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("payload", ctx.getProductInformation())("pathToAssets", ctx.testPathToAssetsRet());
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](9, _c0));
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("payload", ctx.getTransitionCreateBot())("pathToAssets", ctx.testPathToAssetsRet());
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("PerformanceInformation", ctx.getPerformanceInformation());
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("payload", ctx.getPerformanceAndBenefits())("pathToAssets", ctx.testPathToAssetsRet());
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("BenefitsBots", ctx.getBenefitsBots());
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("payload", ctx.gethConsultation())("pathToAssets", ctx.testPathToAssetsRet());
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("Consultation", ctx.gethConsultation());
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("payload", ctx.getTariffs())("pathToAssets", ctx.testPathToAssetsRet());
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("Tariffs", ctx.gethTariffs());
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("categories", ctx.getFooter())("pathToAssets", ctx.testPathToAssetsRet());
         }
       },
-      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgStyle"]],
+      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"]],
       styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"]
     });
     /*@__PURE__*/
@@ -596,43 +538,73 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       function BotStoreService() {
         _classCallCheck(this, BotStoreService);
 
+        /**
+         * временный префикс ссылки для картинок
+         */
+        this.testPathToAssets = "https://cdn.ramman.net/flexy-view/abdullakh/bot/assets/";
+        this.formCommunication = {
+          id: '1',
+          formInterviewText: [{
+            nameInterview: 'Как вас зовут',
+            businessInterview: 'У вас уже есть бизнес',
+            businessSelect: [{
+              id: 1,
+              select: 'Да',
+              selected: true
+            }, {
+              id: 2,
+              select: 'Планирую открыть',
+              selected: false
+            }, {
+              id: 3,
+              select: 'Нет',
+              selected: false
+            }],
+            websiteInterview: 'Ссылка на ваш сайт (если есть)',
+            numberInterview: 'Ваш номер',
+            btnText: 'Создать бота'
+          }]
+        };
         this.header = {
           id: 'header',
-          logoUrl: "https://static.tildacdn.com/tild3532-3833-4936-a237-616331303266/5.jpg",
+          logoUrl: "5.jpg",
           phoneNumber: '+7 995 606 84 62',
           menu: [{
             id: 1,
-            linkName: 'Возможности'
+            linkName: 'Возможности',
+            menuLine: 'menuLine.svg'
           }, {
             id: 2,
-            linkName: 'Преимущества'
+            linkName: 'Преимущества',
+            menuLine: 'menuLine.svg'
           }, {
             id: 3,
-            linkName: 'Для кого'
+            linkName: 'Для кого',
+            menuLine: 'menuLine.svg'
           }]
         };
         this.ProductPresentation = {
-          imgUrl: "https://static.tildacdn.com/tild6438-3564-4763-b064-353463373538/phone.svg",
+          imgUrl: "phone.svg",
           icon: [{
             id: 'whatsApp',
-            img: 'https://static.tildacdn.com/tild6666-6137-4538-b264-353465333332/waaa.svg'
+            img: 'waaa.svg'
           }, {
             id: 'telegram',
-            img: 'https://static.tildacdn.com/tild3638-6633-4764-a662-653739626663/telegram.png'
+            img: 'telegram.png'
           }, {
             id: 'viber',
-            img: 'https://static.tildacdn.com/tild3161-6165-4964-a137-616535383837/viber.png'
+            img: 'viber.png'
           }, {
             id: 'mes',
-            img: 'https://static.tildacdn.com/tild6430-3636-4533-b661-613233343835/fb.svg'
+            img: 'fb.svg'
           }, {
             id: 'vk',
-            img: 'https://static.tildacdn.com/tild6465-3664-4032-a239-373162326538/vk.svg'
+            img: 'vk.svg'
           }],
           title: [{
             id: 1,
             text: "Сделаем\n" + "\nчат-бота для\n" + "\nтвоего бизнеса\n",
-            imgUrl: "https://static.tildacdn.com/tild3435-6138-4434-b732-643736653037/Vector.svg",
+            imgUrl: "Vector.svg",
             behindText: 'за',
             price: '9 900 ₽',
             btnText: 'Создать бота'
@@ -642,32 +614,32 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           title: "Что умеют чат-боты",
           infoBlock: [{
             id: 1,
-            outerImg: 'https://static.tildacdn.com/tild3430-3262-4337-b730-313335633963/44.svg',
-            innerImg: 'https://static.tildacdn.com/tild3532-3939-4562-b663-663931636265/rocket_1.svg',
+            outerImg: 'productInfoImg_1.svg',
+            innerImg: 'rocket_1.svg',
             text: "\n            \u0427\u0430\u0442-\u0431\u043E\u0442 \u043C\u043E\u0436\u0435\u0442 \u043F\u0440\u0438\u0432\u043E\u0434\u0438\u0442\u044C \u0432\u0430\u043C\n                <strong>\n                    <span style=\"color: rgb(255, 208, 0);\">\n                        \u043D\u043E\u0432\u044B\u0445 \u043A\u043B\u0438\u0435\u043D\u0442\u043E\u0432\n                    </span>\n                </strong>",
             btnText: 'То, что мне нужно!'
           }, {
             id: 2,
-            outerImg: 'https://static.tildacdn.com/tild6630-3366-4334-b333-646634656662/Group_27.svg',
-            innerImg: 'https://static.tildacdn.com/tild3362-3036-4664-a637-396261393335/profit_1.svg',
+            outerImg: 'productInfoImg_2.svg',
+            innerImg: 'profit_1.svg',
             text: "\n            \u0427\u0430\u0442-\u0431\u043E\u0442 \u043C\u043E\u0436\u0435\u0442\n              <strong>\n                <span data-redactor-tag=\"span\" style=\"color: rgb(255, 208, 0);\">\n                    \u0443\u0432\u0435\u043B\u0438\u0447\u0438\u0442\u044C \u043A\u043E\u043D\u0432\u0435\u0440\u0441\u0438\u044E\n                </span>\n              </strong> \u0432\u0430\u0448\u0435\u0433\u043E \u0441\u0430\u0439\u0442\u0430 \u0438\u043B\u0438 \u043F\u043E\u0432\u0442\u043E\u0440\u043D\u044B\u0435 \u043F\u0440\u043E\u0434\u0430\u0436\u0438 \u0438\u043C\u0435\u044E\u0449\u0438\u043C\u0441\u044F \u043A\u043B\u0438\u0435\u043D\u0442\u0430\u043C",
             btnText: 'Хочу такого!'
           }, {
             id: 3,
-            outerImg: 'https://static.tildacdn.com/tild3430-3262-4337-b730-313335633963/44.svg',
-            innerImg: 'https://static.tildacdn.com/tild6438-3839-4237-b463-636463636537/training_1.svg',
+            outerImg: 'productInfoImg_3.svg',
+            innerImg: 'training_1.svg',
             text: "\n            \u0427\u0430\u0442-\u0431\u043E\u0442 \u043C\u043E\u0436\u0435\u0442\n            <span style=\"color: rgb(255, 208, 0);\">\n              <strong>\u043E\u0431\u0443\u0447\u0430\u0442\u044C </strong>\n            </span>\n            \u0432\u0430\u0448\u0438\u0445 \u043A\u043B\u0438\u0435\u043D\u0442\u043E\u0432 \u0438\n             <strong>\n               <span style=\"color: rgb(255, 208, 0);\">\n                 \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u043E\u0432\n               </span>\n             </strong>",
             btnText: 'Точно для нас!'
           }, {
             id: 4,
-            outerImg: 'https://static.tildacdn.com/tild3430-3262-4337-b730-313335633963/44.svg',
-            innerImg: 'https://static.tildacdn.com/tild3833-3830-4664-a363-313436303033/chatbot_1.svg',
+            outerImg: 'productInfoImg_4.svg',
+            innerImg: 'chatbot_1.svg',
             text: "\n            \u0427\u0430\u0442-\u0431\u043E\u0442 \u043C\u043E\u0436\u0435\u0442 \u0432\u044B\u043F\u043E\u043B\u043D\u044F\u0442\u044C \u0440\u043E\u043B\u0438 \u0441\u0435\u043A\u0440\u0435\u0442\u0430\u0440\u044F, \u0430\u0434\u043C\u0438\u043D\u0438\u0441\u0442\u0440\u0430\u0442\u043E\u0440\u0430,\n            \u043F\u0440\u043E\u0434\u0430\u0432\u0446\u0430. \u0441\u043F\u0435\u0446\u0438\u0430\u043B\u0438\u0441\u0442\u0430 \u0442\u0435\u0445\u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0438,\n            <strong>\n              <span style=\"color: rgb(255, 208, 0);\">\n                \u0441\u043E\u043F\u0440\u043E\u0432\u043E\u0436\u0434\u0430\u044F\n              </span>\n            </strong>\n            \u0432\u0430\u0448\u0438\u0445\n            <span style=\"color: rgb(255, 208, 0);\">\n              <strong>\n                \u043A\u043B\u0438\u0435\u043D\u0442\u043E\u0432\n              </strong>\n            </span>\n            \u043F\u043E \u0432\u0441\u0435\u043C\u0443 \u0446\u0438\u043A\u043B\u0443 \u0441\u0434\u0435\u043B\u043A\u0438.",
             btnText: 'Подходит!'
           }, {
             id: 5,
-            outerImg: 'https://static.tildacdn.com/tild3430-3262-4337-b730-313335633963/44.svg',
-            innerImg: 'https://static.tildacdn.com/tild3333-3336-4335-b164-356134623438/plane_1.svg',
+            outerImg: 'productInfoImg_5.svg',
+            innerImg: 'plane_1.svg',
             text: "\n            \u0427\u0430\u0442-\u0431\u043E\u0442 \u043C\u043E\u0436\u0435\u0442 \u0440\u0430\u0441\u0441\u044B\u043B\u0430\u0442\u044C \u0432\u0430\u0448\u0438\u043C \u043A\u043B\u0438\u0435\u043D\u0442\u0430\u043C \u043F\u043E\u043B\u0435\u0437\u043D\u0443\u044E\n            \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044E, \u043F\u043E\u0434\u0433\u043E\u0442\u043E\u0432\u0438\u0442\u044C \u0438\u0445 \u043A \u043F\u043E\u043A\u0443\u043F\u043A\u0435,\n            <strong>\n              <span style=\"color: rgb(255, 208, 0);\">\n                \u043E\u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0438\u0442\u044C \u0434\u043E\u043F\u0440\u043E\u0434\u0430\u0436\u0443\n              </span>\n            </strong> \u0434\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0445\n            \u0442\u043E\u0432\u0430\u0440\u043E\u0432 \u0438\u043B\u0438 \u0443\u0441\u043B\u0443\u0433.",
             btnText: 'Идеально, беру!'
           }]
@@ -675,7 +647,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.TransitionCreateBot = {
           title: [{
             id: 1,
-            imgUrl: "https://static.tildacdn.com/tild6161-3938-4737-a531-663931386535/undraw_chat_bot_kli5.svg",
+            imgUrl: "undraw_chat_bot_kli5.svg",
             title: "\u0421\u043E\u0437\u0434\u0430\u0439 <br/> \u0441\u0432\u043E\u0435\u0433\u043E \u0431\u043E\u0442\u0430"
           }],
           follow: [{
@@ -684,149 +656,151 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             btnText: 'Создать бота'
           }]
         };
-        this.PerformanceandBenefitsbckgrnd = 'https://static.tildacdn.com/tild3838-6433-4637-a435-313133666535/bg.svg';
-        this.PerformanceInformation = {
-          imgUrl: 'https://static.tildacdn.com/tild3566-3665-4163-b435-653234346164/phone.svg',
-          title: 'Где использование ботов будет наиболее эффективным.',
-          ContentRightEndText: 'ВАШ БИЗНЕС',
-          ContentLeftEndText: 'ВАШ БИЗНЕС',
-          btnText: 'Разработать →',
-          right: [{
-            id: 1,
-            text: 'Агентства недвижимости и застройщики'
-          }, {
-            id: 2,
-            text: 'Дизайн и ремонт квартир'
-          }, {
-            id: 3,
-            text: 'Юридические услуги'
-          }, {
-            id: 4,
-            text: 'Автошколы'
-          }, {
-            id: 5,
-            text: 'Автосервисы'
-          }, {
-            id: 6,
-            text: 'Страховые компании и брокеры'
-          }, {
-            id: 7,
-            text: 'Ремонт бытовой техники'
-          }, {
-            id: 8,
-            text: 'Маникюр, ресницы, перманентный макияж, прически'
-          }, {
-            id: 9,
-            text: 'Медицинские центры'
-          }, {
-            id: 10,
-            text: 'Курсы иностранных языков'
-          }, {
-            id: 11,
-            text: 'Изготовление мебели'
-          }, {
-            id: 12,
-            text: 'Транспортные компании (такси, перевозки)'
-          }, {
-            id: 13,
-            text: 'Купля-продажа недвижимости'
+        this.PerformanceAndBenefits = {
+          PerformanceandBenefitsbckgrnd: 'bg.svg',
+          PerformanceInformation: [{
+            imgUrl: 'perfomansInfoImg.svg',
+            title: 'Где использование ботов будет наиболее эффективным.',
+            ContentRightEndText: 'ВАШ БИЗНЕС',
+            ContentLeftEndText: 'ВАШ БИЗНЕС',
+            btnText: 'Разработать →',
+            right: [{
+              id: 1,
+              text: 'Агентства недвижимости и застройщики'
+            }, {
+              id: 2,
+              text: 'Дизайн и ремонт квартир'
+            }, {
+              id: 3,
+              text: 'Юридические услуги'
+            }, {
+              id: 4,
+              text: 'Автошколы'
+            }, {
+              id: 5,
+              text: 'Автосервисы'
+            }, {
+              id: 6,
+              text: 'Страховые компании и брокеры'
+            }, {
+              id: 7,
+              text: 'Ремонт бытовой техники'
+            }, {
+              id: 8,
+              text: 'Маникюр, ресницы, перманентный макияж, прически'
+            }, {
+              id: 9,
+              text: 'Медицинские центры'
+            }, {
+              id: 10,
+              text: 'Курсы иностранных языков'
+            }, {
+              id: 11,
+              text: 'Изготовление мебели'
+            }, {
+              id: 12,
+              text: 'Транспортные компании (такси, перевозки)'
+            }, {
+              id: 13,
+              text: 'Купля-продажа недвижимости'
+            }],
+            left: [{
+              id: 1,
+              text: 'Еда (Ресторан, доставка)'
+            }, {
+              id: 2,
+              text: 'Одежда, обувь и аксессуары'
+            }, {
+              id: 3,
+              text: 'Автосалоны и запчасти'
+            }, {
+              id: 4,
+              text: 'Товары для ремонта'
+            }, {
+              id: 5,
+              text: 'Товары для дома и дачи'
+            }, {
+              id: 6,
+              text: 'Товары для спорта и отдыха'
+            }, {
+              id: 7,
+              text: 'Товары для красоты и здоровья'
+            }, {
+              id: 8,
+              text: 'Салоны цветов и подарков'
+            }, {
+              id: 9,
+              text: 'Компьютеры, электроника и бытовая техника'
+            }, {
+              id: 10,
+              text: 'Любые интернет-магазины'
+            }, {
+              id: 11,
+              text: 'Игрушки, игры и развлечения'
+            }, {
+              id: 12,
+              text: 'Узкоспециализированные товары'
+            }, {
+              id: 13,
+              text: 'Книги и обучающие материалы'
+            }]
           }],
-          left: [{
-            id: 1,
-            text: 'Еда (Ресторан, доставка)'
-          }, {
-            id: 2,
-            text: 'Одежда, обувь и аксессуары'
-          }, {
-            id: 3,
-            text: 'Автосалоны и запчасти'
-          }, {
-            id: 4,
-            text: 'Товары для ремонта'
-          }, {
-            id: 5,
-            text: 'Товары для дома и дачи'
-          }, {
-            id: 6,
-            text: 'Товары для спорта и отдыха'
-          }, {
-            id: 7,
-            text: 'Товары для красоты и здоровья'
-          }, {
-            id: 8,
-            text: 'Салоны цветов и подарков'
-          }, {
-            id: 9,
-            text: 'Компьютеры, электроника и бытовая техника'
-          }, {
-            id: 10,
-            text: 'Любые интернет-магазины'
-          }, {
-            id: 11,
-            text: 'Игрушки, игры и развлечения'
-          }, {
-            id: 12,
-            text: 'Узкоспециализированные товары'
-          }, {
-            id: 13,
-            text: 'Книги и обучающие материалы'
-          }]
-        };
-        this.BenefitsBots = {
-          title: "Преимущества чат-ботов",
-          infoBlock: [{
-            id: 1,
-            outerImg: 'https://static.tildacdn.com/tild3730-6136-4538-b535-333639386533/Ellipse_12.svg',
-            innerImg: 'https://static.tildacdn.com/tild6462-3862-4966-a361-363238616264/1.svg',
-            title: 'Низкая цена',
-            text: 'Бот поможет оптимизировать затраты на сотрудников'
-          }, {
-            id: 2,
-            outerImg: 'https://static.tildacdn.com/tild3730-6136-4538-b535-333639386533/Ellipse_12.svg',
-            innerImg: 'https://static.tildacdn.com/tild3466-3337-4139-b261-353162653833/2.svg',
-            title: 'Рост конверсии',
-            text: 'Бот увеличивает приток клиентов с сайта, и привлекает новых клиентов'
-          }, {
-            id: 3,
-            outerImg: 'https://static.tildacdn.com/tild3730-6136-4538-b535-333639386533/Ellipse_12.svg',
-            innerImg: 'https://static.tildacdn.com/tild3434-3466-4665-b634-666564303434/3.svg',
-            title: 'Работает 24/7',
-            text: 'Бот не отдыхает, не обедает, не спит'
-          }, {
-            id: 4,
-            outerImg: 'https://static.tildacdn.com/tild3730-6136-4538-b535-333639386533/Ellipse_12.svg',
-            innerImg: 'https://static.tildacdn.com/tild6335-3332-4338-b232-383161306137/10.svg',
-            title: 'Высокая скорость работы',
-            text: 'Бот отвечает моментально'
-          }, {
-            id: 5,
-            outerImg: 'https://static.tildacdn.com/tild3730-6136-4538-b535-333639386533/Ellipse_12.svg',
-            innerImg: 'https://static.tildacdn.com/tild3636-3263-4330-b131-666462653465/5.svg',
-            title: 'Простое обслуживание',
-            text: 'Бота легко дорабатывать и обновлять'
-          }, {
-            id: 6,
-            outerImg: 'https://static.tildacdn.com/tild3730-6136-4538-b535-333639386533/Ellipse_12.svg',
-            innerImg: 'https://static.tildacdn.com/tild6537-6631-4335-b334-306266373339/6.svg',
-            title: 'Автоматизация рутины',
-            text: 'Бот экономит ваше время автоматически выполняя любые типовые задачи'
+          BenefitsBots: [{
+            title: "Преимущества чат-ботов",
+            infoBlock: [{
+              id: 1,
+              outerImg: 'Ellipse_12.svg',
+              innerImg: '1.svg',
+              title: 'Низкая цена',
+              text: 'Бот поможет оптимизировать затраты на сотрудников'
+            }, {
+              id: 2,
+              outerImg: 'Ellipse_12.svg',
+              innerImg: '2.svg',
+              title: 'Рост конверсии',
+              text: 'Бот увеличивает приток клиентов с сайта, и привлекает новых клиентов'
+            }, {
+              id: 3,
+              outerImg: 'Ellipse_12.svg',
+              innerImg: '3.svg',
+              title: 'Работает 24/7',
+              text: 'Бот не отдыхает, не обедает, не спит'
+            }, {
+              id: 4,
+              outerImg: 'Ellipse_12.svg',
+              innerImg: '10.svg',
+              title: 'Высокая скорость работы',
+              text: 'Бот отвечает моментально'
+            }, {
+              id: 5,
+              outerImg: 'Ellipse_12.svg',
+              innerImg: '5.svg',
+              title: 'Простое обслуживание',
+              text: 'Бота легко дорабатывать и обновлять'
+            }, {
+              id: 6,
+              outerImg: 'Ellipse_12.svg',
+              innerImg: '6.svg',
+              title: 'Автоматизация рутины',
+              text: 'Бот экономит ваше время автоматически выполняя любые типовые задачи'
+            }]
           }]
         };
         this.Consultation = {
-          imgUrl: 'https://static.tildacdn.com/tild6436-6430-4061-a561-343031666633/undraw_moving_forwar.svg',
+          imgUrl: 'undraw_moving_forwar.svg',
           title: 'Бесплатная консультация',
           text: "\n        \u0420\u0430\u0441\u0441\u043A\u0430\u0436\u0435\u043C \u043A\u0430\u043A\u043E\u0439\n            <strong>\n                <span style=\"color: rgb(255, 208, 0);\">\n                    \u0447\u0430\u0442-\u0431\u043E\u0442\n                </span>\n            </strong> \u043F\u043E\u0434\u043E\u0439\u0434\u0435\u0442\n            <strong>\n                <span style=\"color: rgb(255, 208, 0);\">\n                    \u0432\u0430\u0448\u0435\u043C\u0443 \u0431\u0438\u0437\u043D\u0435\u0441\u0443\n                 </span>\n            </strong>",
           btnText: 'Хочу консультацию'
         };
         this.Tariffs = {
-          dinamicImg: 'https://static.tildacdn.com/tild6132-6539-4561-b838-663866306265/Vector.svg',
+          dinamicImg: 'tariffsDinamicImg.svg',
           dinamicText: '$',
           title: "Тарифы",
-          bckgrndImg: 'https://static.tildacdn.com/tild3962-3166-4338-a434-383631623131/undraw_work_chat_erd.svg',
+          bckgrndImg: 'undraw_work_chat_erd.svg',
           infoBlock: [{
             id: 1,
-            outerImg: 'https://static.tildacdn.com/tild3433-3861-4062-a230-656534333436/Ellipse_11.svg',
-            innerImg: 'https://static.tildacdn.com/tild6237-3161-4162-b332-623865363564/boy_1.svg',
+            outerImg: 'Ellipse_11.svg',
+            innerImg: 'boy_1.svg',
             "class": 'small',
             title: 'Чат-бот визитка',
             text: 'Чат-бот который поможет вашим клиентам познакомится с вашим бизнесом, узнать информацию о оказываемых услугах.',
@@ -834,8 +808,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             btnText: 'Заказать бота'
           }, {
             id: 2,
-            outerImg: 'https://static.tildacdn.com/tild3433-3861-4062-a230-656534333436/Ellipse_11.svg',
-            innerImg: 'https://static.tildacdn.com/tild6366-6131-4761-b338-623963616534/icons8-chuck-norris-.png',
+            outerImg: 'Ellipse_11.svg',
+            innerImg: 'icons8-chuck-norris-.png',
             "class": 'big',
             title: 'Чат-бот лидогенератор',
             text: 'Помогает обрабатывать запросы клиентов в мессенджерах.\n' + 'В режиме "вопрос-ответ" узнает потребность клиента, собирает контактные данные и отправляет заявку на вашу почту или в CRM.',
@@ -843,8 +817,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             btnText: 'Заказать бота'
           }, {
             id: 3,
-            outerImg: 'https://static.tildacdn.com/tild3433-3861-4062-a230-656534333436/Ellipse_11.svg',
-            innerImg: 'https://static.tildacdn.com/tild3138-3537-4766-a237-383331316461/darth.svg',
+            outerImg: 'Ellipse_11.svg',
+            innerImg: 'darth.svg',
             "class": 'small',
             title: 'Чат-бот магазин',
             text: 'Чат-бот знакомит покупателя с ассортиментом товаров\n.' + 'Главное меню с кнопками помогает покупателю сформировать заказ и оплатить его банковской картой.',
@@ -852,9 +826,77 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             btnText: 'Заказать бота'
           }]
         };
+        this.footer = {
+          systemButtons: [{
+            name: 'Магазин',
+            title: 'Магазин',
+            icon: 'https://support.apple.com/library/content/dam/edam/applecare/images/en_US/il/ios11-imessage-app-store-icon.png',
+            badges: 3,
+            id: 1
+          }, {
+            name: 'Фото',
+            title: 'Фото',
+            icon: 'https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios12-messages-imessage-photos-app.png',
+            badges: 0,
+            id: 2
+          }, {
+            name: 'Музыка',
+            title: 'Музыка',
+            icon: 'https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios10-message-imessage-music-app.png',
+            badges: 3,
+            id: 3
+          }, {
+            name: 'Digital Touch',
+            title: 'Digital Touch',
+            icon: 'https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios11-imessage-digital-touch-icon.png',
+            badges: 1,
+            id: 4
+          }],
+          userButtons: [{
+            name: 'images',
+            title: 'images',
+            icon: 'https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios10-message-imessage-images-app.png',
+            badges: 0,
+            id: 1
+          }, {
+            name: 'Apple Pay',
+            title: 'Apple Pay',
+            icon: 'https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios11-message-imessage-apple-pay-app.png',
+            badges: 4,
+            id: 2
+          }, {
+            name: 'Animoji',
+            title: 'Animoji',
+            icon: 'https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios12-messages-imessage-memoji-icon.png',
+            badges: 0,
+            id: 3
+          }, {
+            name: 'Memoji',
+            title: 'Memoji',
+            icon: 'https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios13-imessage-memoji-sticker-icon.png',
+            badges: 0,
+            id: 4
+          }, {
+            name: 'WhatsApp',
+            title: 'WhatsApp',
+            icon: 'https://i2.wp.com/nigil.ru/wp-content/uploads/2015/06/whatsapp.png?resize=512%2C512',
+            badges: 33,
+            id: 5
+          }]
+        };
       }
 
       _createClass(BotStoreService, [{
+        key: "testPathToAssetsRet",
+        value: function testPathToAssetsRet() {
+          return this.testPathToAssets;
+        }
+      }, {
+        key: "getFormCommunication",
+        value: function getFormCommunication() {
+          return this.formCommunication;
+        }
+      }, {
         key: "getHeader",
         value: function getHeader() {
           return this.header;
@@ -875,19 +917,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return this.TransitionCreateBot;
         }
       }, {
-        key: "getPerformanceandBenefitsbckgrnd",
-        value: function getPerformanceandBenefitsbckgrnd() {
-          return this.PerformanceandBenefitsbckgrnd;
-        }
-      }, {
-        key: "getPerformanceInformation",
-        value: function getPerformanceInformation() {
-          return this.PerformanceInformation;
-        }
-      }, {
-        key: "getBenefitsBots",
-        value: function getBenefitsBots() {
-          return this.BenefitsBots;
+        key: "getPerformanceAndBenefits",
+        value: function getPerformanceAndBenefits() {
+          return this.PerformanceAndBenefits;
         }
       }, {
         key: "gethConsultation",
@@ -895,9 +927,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return this.Consultation;
         }
       }, {
-        key: "gethTariffs",
-        value: function gethTariffs() {
+        key: "getTariffs",
+        value: function getTariffs() {
           return this.Tariffs;
+        }
+      }, {
+        key: "getFooter",
+        value: function getFooter() {
+          return this.footer;
         }
       }]);
 
