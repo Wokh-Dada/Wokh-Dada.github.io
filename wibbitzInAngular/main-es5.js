@@ -249,9 +249,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function clickOnSwitchTheme(_ref) {
           var detail = _ref.detail;
 
-          if (detail.target.id === 'theme_1') {
+          if (detail.id === 'theme_1') {
             this.router.navigate(['']);
-          } else if (detail.target.id === 'theme_2') {
+          } else if (detail.id === 'theme_2') {
             this.router.navigate(['theme_2']);
           }
         }

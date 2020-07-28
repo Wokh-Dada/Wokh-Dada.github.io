@@ -153,10 +153,10 @@ class AppComponent {
      * клик по элементам Toggle theme
      */
     clickOnSwitchTheme({ detail }) {
-        if (detail.target.id === 'theme_1') {
+        if (detail.id === 'theme_1') {
             this.router.navigate(['']);
         }
-        else if (detail.target.id === 'theme_2') {
+        else if (detail.id === 'theme_2') {
             this.router.navigate(['theme_2']);
         }
     }

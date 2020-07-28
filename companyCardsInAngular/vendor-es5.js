@@ -106577,15 +106577,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
-  "./node_modules/s-abdullakh-companycards/dist/esm/index-5886095c.js":
+  "./node_modules/s-abdullakh-companycards/dist/esm/index-911b42a9.js":
   /*!**************************************************************************!*\
-    !*** ./node_modules/s-abdullakh-companycards/dist/esm/index-5886095c.js ***!
+    !*** ./node_modules/s-abdullakh-companycards/dist/esm/index-911b42a9.js ***!
     \**************************************************************************/
 
   /*! exports provided: a, b, c, h, p, r */
 
   /***/
-  function node_modulesSAbdullakhCompanycardsDistEsmIndex5886095cJs(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesSAbdullakhCompanycardsDistEsmIndex911b42a9Js(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
@@ -107354,6 +107354,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       attachToAncestor(hostRef, ancestorComponent);
       var promise;
+
+      if (isInitialLoad) {
+        {
+          promise = safeCall(instance, 'componentWillLoad');
+        }
+      }
+
       endSchedule(); // there is no ancestorc omponent or the ancestor component
       // has already fired off its lifecycle update then
       // fire off the initial update
@@ -107444,6 +107451,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var tagName = hostRef.$cmpMeta$.$tagName$;
       var elm = hostRef.$hostElement$;
       var endPostUpdate = createTime('postUpdate', tagName);
+      var instance = hostRef.$lazyInstance$;
       var ancestorComponent = hostRef.$ancestorComponent$;
 
       if (!(hostRef.$flags$ & 64
@@ -107455,6 +107463,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         {
           // DOM WRITE!
           addHydratedFlag(elm);
+        }
+        {
+          safeCall(instance, 'componentDidLoad');
         }
         endPostUpdate();
         {
@@ -107527,6 +107538,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
         });
       });
+    };
+
+    var safeCall = function safeCall(instance, method, arg) {
+      if (instance && instance[method]) {
+        try {
+          return instance[method](arg);
+        } catch (e) {
+          consoleError(e);
+        }
+      }
+
+      return undefined;
     };
 
     var then = function then(promise, thenFn) {
@@ -108221,13 +108244,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _index_5886095c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! ./index-5886095c.js */
-    "./node_modules/s-abdullakh-companycards/dist/esm/index-5886095c.js");
+    var _index_911b42a9_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! ./index-911b42a9.js */
+    "./node_modules/s-abdullakh-companycards/dist/esm/index-911b42a9.js");
 
     var defineCustomElements = function defineCustomElements(win, options) {
-      return Object(_index_5886095c_js__WEBPACK_IMPORTED_MODULE_0__["a"])().then(function () {
-        return Object(_index_5886095c_js__WEBPACK_IMPORTED_MODULE_0__["b"])([["my-component_30", [[0, "my-component"], [0, "s-abdullakh-header", {
+      return Object(_index_911b42a9_js__WEBPACK_IMPORTED_MODULE_0__["a"])().then(function () {
+        return Object(_index_911b42a9_js__WEBPACK_IMPORTED_MODULE_0__["b"])([["my-component_30", [[0, "my-component", {
+          "popupComplited": [32]
+        }], [0, "s-abdullakh-header", {
           "headText": [8, "head-text"],
           "headNav": [16]
         }], [0, "s-abdullakh-footer", {

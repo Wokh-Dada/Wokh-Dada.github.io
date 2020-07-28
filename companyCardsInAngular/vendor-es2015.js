@@ -73566,9 +73566,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/s-abdullakh-companycards/dist/esm/index-5886095c.js":
+/***/ "./node_modules/s-abdullakh-companycards/dist/esm/index-911b42a9.js":
 /*!**************************************************************************!*\
-  !*** ./node_modules/s-abdullakh-companycards/dist/esm/index-5886095c.js ***!
+  !*** ./node_modules/s-abdullakh-companycards/dist/esm/index-911b42a9.js ***!
   \**************************************************************************/
 /*! exports provided: a, b, c, h, p, r */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -74198,6 +74198,11 @@ const scheduleUpdate = (hostRef, isInitialLoad) => {
     const update = () => updateComponent(hostRef, instance, isInitialLoad);
     attachToAncestor(hostRef, ancestorComponent);
     let promise;
+    if (isInitialLoad) {
+        {
+            promise = safeCall(instance, 'componentWillLoad');
+        }
+    }
     endSchedule();
     // there is no ancestorc omponent or the ancestor component
     // has already fired off its lifecycle update then
@@ -74266,12 +74271,16 @@ const postUpdateComponent = (hostRef) => {
     const tagName = hostRef.$cmpMeta$.$tagName$;
     const elm = hostRef.$hostElement$;
     const endPostUpdate = createTime('postUpdate', tagName);
+    const instance =  hostRef.$lazyInstance$ ;
     const ancestorComponent = hostRef.$ancestorComponent$;
     if (!(hostRef.$flags$ & 64 /* hasLoadedComponent */)) {
         hostRef.$flags$ |= 64 /* hasLoadedComponent */;
         {
             // DOM WRITE!
             addHydratedFlag(elm);
+        }
+        {
+            safeCall(instance, 'componentDidLoad');
         }
         endPostUpdate();
         {
@@ -74318,6 +74327,17 @@ const appDidLoad = (who) => {
         addHydratedFlag(doc.documentElement);
     }
     nextTick(() => emitEvent(win, 'appload', { detail: { namespace: NAMESPACE } }));
+};
+const safeCall = (instance, method, arg) => {
+    if (instance && instance[method]) {
+        try {
+            return instance[method](arg);
+        }
+        catch (e) {
+            consoleError(e);
+        }
+    }
+    return undefined;
 };
 const then = (promise, thenFn) => {
     return promise && promise.then ? promise.then(thenFn) : thenFn();
@@ -74781,11 +74801,11 @@ const patchDynamicImport = (base, orgScriptElm) => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "defineCustomElements", function() { return defineCustomElements; });
-/* harmony import */ var _index_5886095c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-5886095c.js */ "./node_modules/s-abdullakh-companycards/dist/esm/index-5886095c.js");
+/* harmony import */ var _index_911b42a9_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-911b42a9.js */ "./node_modules/s-abdullakh-companycards/dist/esm/index-911b42a9.js");
 
 
-const defineCustomElements = (win, options) => Object(_index_5886095c_js__WEBPACK_IMPORTED_MODULE_0__["a"])().then(() => {
-  return Object(_index_5886095c_js__WEBPACK_IMPORTED_MODULE_0__["b"])([["my-component_30",[[0,"my-component"],[0,"s-abdullakh-header",{"headText":[8,"head-text"],"headNav":[16]}],[0,"s-abdullakh-footer",{"footer":[16]}],[0,"s-abdullakh-product-presentation",{"productPresentation":[8,"product-presentation"]}],[0,"s-abdullakh-clause-match",{"clauseMatch":[8,"clause-match"]}],[0,"s-abdullakh-expense-management",{"expenseManagementImg":[1,"expense-management-img"],"expenseManagement":[8,"expense-management"]}],[0,"s-abdullakh-explore-features",{"exploreFeatures":[8,"explore-features"]}],[0,"s-abdullakh-icons-block",{"previewBackground":[8,"preview-background"]}],[0,"s-abdullakh-other-features",{"otherFeatures":[8,"other-features"],"featuresblock":[8]}],[0,"s-abdullakh-personal-security",{"personalSecurityImg":[1,"personal-security-img"],"personalSecurity":[8,"personal-security"]}],[0,"s-abdullakh-security-control",{"securityControlImg":[1,"security-control-img"],"securityControl":[8,"security-control"]}],[0,"s-abdullakh-card-design",{"cardDesign":[8,"card-design"]}],[0,"s-abdullakh-link-block",{"linkBlock":[8,"link-block"]}],[0,"s-abdullakh-multi-currency-slaider",{"multiCurrencySlaider":[1,"multi-currency-slaider"]}],[0,"s-abdullakh-pre-header"],[0,"s-abdullakh-head-menu",{"headText":[8,"head-text"],"headNav":[16]}],[0,"s-abdullakh-footer-menu-blocks",{"arr":[8]}],[0,"s-abdullakh-clause-match-content",{"clauseMatch":[8,"clause-match"]}],[0,"s-abdullakh-explore-features-blocks",{"arr":[8]}],[0,"s-abdullakh-footer-logo-blocks",{"arr":[8]}],[0,"s-abdullakh-icons",{"arr":[8]}],[0,"s-abdullakh-other-features-blocks",{"arr":[8]}],[0,"s-abdullakh-product-presentation-content",{"arr":[8],"videoScr":[1,"video-scr"]}],[0,"s-abdullakh-product-presentation-video",{"videoScr":[8,"video-scr"]}],[0,"s-abdullakh-head-menu-popup",{"arr":[8]}],[0,"s-abdullakh-footer-menu-links",{"arr":[8]}],[0,"s-abdullakh-head-nav-end",{"headText":[8,"head-text"]}],[0,"s-abdullakh-head-nav-start",{"headText":[8,"head-text"]}],[0,"s-abdullakh-head-menu-in-popup",{"arr":[8]}],[0,"s-abdullakh-list-block",{"arr":[8]}]]]], options);
+const defineCustomElements = (win, options) => Object(_index_911b42a9_js__WEBPACK_IMPORTED_MODULE_0__["a"])().then(() => {
+  return Object(_index_911b42a9_js__WEBPACK_IMPORTED_MODULE_0__["b"])([["my-component_30",[[0,"my-component",{"popupComplited":[32]}],[0,"s-abdullakh-header",{"headText":[8,"head-text"],"headNav":[16]}],[0,"s-abdullakh-footer",{"footer":[16]}],[0,"s-abdullakh-product-presentation",{"productPresentation":[8,"product-presentation"]}],[0,"s-abdullakh-clause-match",{"clauseMatch":[8,"clause-match"]}],[0,"s-abdullakh-expense-management",{"expenseManagementImg":[1,"expense-management-img"],"expenseManagement":[8,"expense-management"]}],[0,"s-abdullakh-explore-features",{"exploreFeatures":[8,"explore-features"]}],[0,"s-abdullakh-icons-block",{"previewBackground":[8,"preview-background"]}],[0,"s-abdullakh-other-features",{"otherFeatures":[8,"other-features"],"featuresblock":[8]}],[0,"s-abdullakh-personal-security",{"personalSecurityImg":[1,"personal-security-img"],"personalSecurity":[8,"personal-security"]}],[0,"s-abdullakh-security-control",{"securityControlImg":[1,"security-control-img"],"securityControl":[8,"security-control"]}],[0,"s-abdullakh-card-design",{"cardDesign":[8,"card-design"]}],[0,"s-abdullakh-link-block",{"linkBlock":[8,"link-block"]}],[0,"s-abdullakh-multi-currency-slaider",{"multiCurrencySlaider":[1,"multi-currency-slaider"]}],[0,"s-abdullakh-pre-header"],[0,"s-abdullakh-head-menu",{"headText":[8,"head-text"],"headNav":[16]}],[0,"s-abdullakh-footer-menu-blocks",{"arr":[8]}],[0,"s-abdullakh-clause-match-content",{"clauseMatch":[8,"clause-match"]}],[0,"s-abdullakh-explore-features-blocks",{"arr":[8]}],[0,"s-abdullakh-footer-logo-blocks",{"arr":[8]}],[0,"s-abdullakh-icons",{"arr":[8]}],[0,"s-abdullakh-other-features-blocks",{"arr":[8]}],[0,"s-abdullakh-product-presentation-content",{"arr":[8],"videoScr":[1,"video-scr"]}],[0,"s-abdullakh-product-presentation-video",{"videoScr":[8,"video-scr"]}],[0,"s-abdullakh-head-menu-popup",{"arr":[8]}],[0,"s-abdullakh-footer-menu-links",{"arr":[8]}],[0,"s-abdullakh-head-nav-end",{"headText":[8,"head-text"]}],[0,"s-abdullakh-head-nav-start",{"headText":[8,"head-text"]}],[0,"s-abdullakh-head-menu-in-popup",{"arr":[8]}],[0,"s-abdullakh-list-block",{"arr":[8]}]]]], options);
 });
 
 
