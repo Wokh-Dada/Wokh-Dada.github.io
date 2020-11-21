@@ -62,45 +62,45 @@ const firstPage = {
             category: 'Report',
             title: 'Explore Intagram Video: How to convert, engage, and get more Intagra...',
             btnText: 'Read Report',
-            widgetImg: 'https://via.placeholder.com/201x180?text=sidebar'
+            widgetImg: 'https://images.unsplash.com/photo-1546146830-2cca9512c68e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80'
         },
         {
             category: 'Blog Post',
             title: 'Explore Intagram Video: How to convert, engage, and get more Intagra...',
             btnText: 'Read Report',
-            widgetImg: 'https://via.placeholder.com/201x180?text=sidebar'
+            widgetImg: 'https://images.unsplash.com/photo-1542546068979-b6affb46ea8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80'
         },
         {
             category: 'Webinar',
             title: 'Explore Intagram Video: How to convert, engage, and get more Intagra...',
             btnText: 'Read Report',
-            widgetImg: 'https://via.placeholder.com/201x180?text=sidebar'
+            widgetImg: 'https://images.unsplash.com/photo-1521898284481-a5ec348cb555?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80'
         },
         {
             category: 'Report',
             title: 'Explore Intagram Video: How to convert, engage, and get more Intagra...',
             btnText: 'Read Report',
-            widgetImg: 'https://via.placeholder.com/201x180?text=sidebar'
+            widgetImg: 'https://images.unsplash.com/photo-1541240290619-3f2fad86473d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80'
         }
     ],
     newPostTitle: 'New Blog Posts',
     newPost: [
         {
-            img: "https://via.placeholder.com/201x180?text=newPost",
+            img: "https://images.unsplash.com/photo-1587380341917-8a9e7da7767b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
             block: 's-abdullakh-new-post',
             category: 'Blog Post',
             title: '4 organic ways to improve your website KPIs',
             btnText: 'Read Report'
         },
         {
-            img: "https://via.placeholder.com/201x180?text=newPost",
+            img: "https://images.unsplash.com/photo-1587021107506-150b694f2950?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1685&q=80",
             block: 's-abdullakh-new-post',
             category: 'Blog Post',
             title: 'How to turn your next event into a video content goldmine',
             btnText: 'Read Report'
         },
         {
-            img: "https://via.placeholder.com/201x180?text=newPost",
+            img: "https://images.unsplash.com/photo-1601198809779-74ad5583198d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1803&q=80",
             block: 's-abdullakh-new-post',
             category: 'Blog Post',
             title: 'How to quickly turn ypur podcast into a video script',
@@ -113,19 +113,19 @@ const firstPage = {
             category: 'Blog Post',
             title: 'Micro-influencers and B2C brand videos: A match made in heaven',
             btnText: 'Read Story',
-            asidetImg: 'https://via.placeholder.com/201x180?text=popularAside'
+            asidetImg: 'https://images.unsplash.com/photo-1586282391077-58933c373376?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
         },
         {
             category: 'Webinar',
             title: 'Webinar: Improving content marketing through visual storytelling',
             btnText: 'Watch Webinar',
-            asidetImg: 'https://via.placeholder.com/201x180?text=popularAside'
+            asidetImg: 'https://images.unsplash.com/photo-1533750516457-a7f992034fec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1381&q=80'
         },
         {
             category: 'Report',
             title: 'How to reach audiences with social video: From Millennials to Gen Z',
             btnText: 'Read Report',
-            asidetImg: 'https://via.placeholder.com/201x180?text=popularAside'
+            asidetImg: 'https://images.unsplash.com/photo-1594122230689-45899d9e6f69?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
         }
     ],
     popularBanner: [
@@ -138,21 +138,21 @@ const firstPage = {
     eventsTitle: 'Upcoming Events',
     events: [
         {
-            img: "https://via.placeholder.com/201x180?text=Event",
+            img: "https://images.unsplash.com/photo-1487715433499-93acdc0bd7c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1414&q=80",
             block: 'events',
             category: 'Blog Post',
             title: '4 organic ways to improve your website KPIs',
             btnText: 'Read Report'
         },
         {
-            img: "https://via.placeholder.com/201x180?text=Event",
+            img: "https://images.unsplash.com/photo-1598931587008-88cc8a5e3a40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
             block: 'events',
             category: 'Blog Post',
             title: 'How to turn your next event into a video content goldmine',
             btnText: 'Read Report'
         },
         {
-            img: "https://via.placeholder.com/201x180?text=Event",
+            img: "https://images.unsplash.com/photo-1588058365718-9d74defc5313?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
             block: 'events',
             category: 'Blog Post',
             title: 'How to quickly turn ypur podcast into a video script',
@@ -4775,7 +4775,7 @@ const FooterMenu = (props) => {
 };
 SAbdullakhFooterMenu.style = sAbdullakhFooterMenuCss;
 
-const sAbdullakhHeaderCss = ".container{max-width:1024px;margin:auto}.container_update{max-width:1200px;margin:auto}.main__menu{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;margin:30px 0;width:100%}.header_menu{text-align:center}.logo{width:150px;background-size:cover;background-position:center}.topnav a{color:black;text-align:center;padding:12px 16px;font-weight:500}.icon{display:none}.iconSpan{display:inline !important}@media (max-width: 1010px){#none{display:none}#block{display:block}.topnav span{display:block;margin-bottom:10px}.icon{float:right;margin-top:-17px;display:block;color:black;font-size:25px;width:100%;text-align:end}nav{width:100%}.topnav.responsive{float:right}header .topnav.responsive{height:340px}.topnav.responsive a{float:none;display:block;text-align:left}.toggleTheme{display:inline-block}}.header_subscribe_input{border-radius:8px;border:2px solid lightgray;padding:0 12px;height:45px;width:227px}.header_btn{background-color:#0056fb;border-radius:9px;color:white;margin-left:-20px;border:2px solid #0056fb;padding:12px;height:45px;width:125px;font-size:14px}.header_search_block{display:inline-block}.header_subscribe_block{float:right}@media (max-width: 1200px){nav{float:right}}";
+const sAbdullakhHeaderCss = ".container{max-width:1024px;margin:auto}.container_update{max-width:1200px;margin:auto}.main__menu{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;margin:30px 0;width:100%}.header_menu{text-align:center}.logo{width:150px;background-size:cover;background-position:center}.topnav a{color:black;text-align:center;padding:12px 16px;font-weight:500}.topnav a:hover{color:#0056fb}.icon{display:none}.iconSpan{display:inline !important;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}@media (max-width: 1010px){#none{display:none}#block{display:block}.topnav span{display:block;margin-bottom:10px}.icon{float:right;margin-top:-17px;display:block;color:black;font-size:25px;width:100%;text-align:end}nav{width:100%}.topnav.responsive{float:right}header .topnav.responsive{height:340px}.topnav.responsive a{float:none;display:block;text-align:left}.toggleTheme{display:inline-block}}.header_subscribe_input{border-radius:8px;border:2px solid lightgray;padding:0 12px;height:45px;width:227px}.header_btn{background-color:#0056fb;border-radius:9px;color:white !important;margin-left:-20px;border:2px solid #0056fb;padding:12px;height:45px;width:125px;font-size:14px}.header_search_block{display:inline-block}.header_subscribe_block{float:right}@media (max-width: 1200px){nav{float:right}}";
 
 const SAbdullakhHeader = class {
     constructor(hostRef) {
@@ -4889,7 +4889,7 @@ const SAbdullakhMenuItem = class {
         this.clickOnHeader = Object(_index_051815ee_js__WEBPACK_IMPORTED_MODULE_0__["c"])(this, "clickOnHeader", 7);
     }
     render() {
-        return (Object(_index_051815ee_js__WEBPACK_IMPORTED_MODULE_0__["h"])("span", { onClick: () => this.clickOnHeader.emit(this.arr) }, Object(_index_051815ee_js__WEBPACK_IMPORTED_MODULE_0__["h"])("a", null, this.arr.linkName)));
+        return (Object(_index_051815ee_js__WEBPACK_IMPORTED_MODULE_0__["h"])("span", { class: 'menu-item', onClick: () => this.clickOnHeader.emit(this.arr) }, Object(_index_051815ee_js__WEBPACK_IMPORTED_MODULE_0__["h"])("a", null, this.arr.linkName)));
     }
 };
 SAbdullakhMenuItem.style = sAbdullakhMenuItemCss;

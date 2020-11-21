@@ -464,7 +464,7 @@
   /***/
   function _(module, exports, __webpack_require__) {
     module.exports = __webpack_require__(
-    /*! C:\Users\User\Desktop\angular\wibbitzInAngular\src\styles.css */
+    /*! /home/abdullakh/WebstormProjects/angular/wibbitzInAngular/src/styles.css */
     "./src/styles.css");
     /***/
   }

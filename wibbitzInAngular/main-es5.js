@@ -248,6 +248,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "clickOnSwitchTheme",
         value: function clickOnSwitchTheme(_ref) {
           var detail = _ref.detail;
+          console.log(detail.id);
 
           if (detail.id === 'theme_1') {
             this.router.navigate(['']);
@@ -892,7 +893,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, ServiceService);
 
         this.header = {
-          logoUrl: "https://48vo7843c3543dkn9cvt8sl1-wpengine.netdna-ssl.com/wp-content/uploads/2019/12/logo.svg",
+          logoUrl: 'https://48vo7843c3543dkn9cvt8sl1-wpengine.netdna-ssl.com/wp-content/uploads/2019/12/logo.svg',
           menu: [{
             id: 'Articles',
             linkName: 'Articles'
@@ -912,7 +913,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }]
         };
         this.firstPage = {
-          newsImg: "https://images.unsplash.com/photo-1589400369397-3363f6afeada?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+          newsImg: 'https://images.unsplash.com/photo-1589400369397-3363f6afeada?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
           news: [{
             category: 'Blog Post',
             title: 'How to opimize your Facebook & Instagram video ads for succes',
@@ -923,39 +924,39 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             category: 'Report',
             title: 'Explore Intagram Video: How to convert, engage, and get more Intagra...',
             btnText: 'Read Report',
-            widgetImg: 'https://via.placeholder.com/201x180?text=sidebar'
+            widgetImg: 'https://images.unsplash.com/photo-1546146830-2cca9512c68e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80'
           }, {
             category: 'Blog Post',
             title: 'Explore Intagram Video: How to convert, engage, and get more Intagra...',
             btnText: 'Read Report',
-            widgetImg: 'https://via.placeholder.com/201x180?text=sidebar'
+            widgetImg: 'https://images.unsplash.com/photo-1542546068979-b6affb46ea8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80'
           }, {
             category: 'Webinar',
             title: 'Explore Intagram Video: How to convert, engage, and get more Intagra...',
             btnText: 'Read Report',
-            widgetImg: 'https://via.placeholder.com/201x180?text=sidebar'
+            widgetImg: 'https://images.unsplash.com/photo-1521898284481-a5ec348cb555?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80'
           }, {
             category: 'Report',
             title: 'Explore Intagram Video: How to convert, engage, and get more Intagra...',
             btnText: 'Read Report',
-            widgetImg: 'https://via.placeholder.com/201x180?text=sidebar'
+            widgetImg: 'https://images.unsplash.com/photo-1541240290619-3f2fad86473d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80'
           }],
           newPostTitle: 'New Blog Posts',
           newPost: [{
-            img: "https://via.placeholder.com/201x180?text=newPost",
-            block: 'new-post',
+            img: 'https://images.unsplash.com/photo-1587380341917-8a9e7da7767b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+            block: 's-abdullakh-new-post',
             category: 'Blog Post',
             title: '4 organic ways to improve your website KPIs',
             btnText: 'Read Report'
           }, {
-            img: "https://via.placeholder.com/201x180?text=newPost",
-            block: 'new-post',
+            img: 'https://images.unsplash.com/photo-1587021107506-150b694f2950?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1685&q=80',
+            block: 's-abdullakh-new-post',
             category: 'Blog Post',
             title: 'How to turn your next event into a video content goldmine',
             btnText: 'Read Report'
           }, {
-            img: "https://via.placeholder.com/201x180?text=newPost",
-            block: 'new-post',
+            img: 'https://images.unsplash.com/photo-1601198809779-74ad5583198d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1803&q=80',
+            block: 's-abdullakh-new-post',
             category: 'Blog Post',
             title: 'How to quickly turn ypur podcast into a video script',
             btnText: 'Read Report'
@@ -965,17 +966,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             category: 'Blog Post',
             title: 'Micro-influencers and B2C brand videos: A match made in heaven',
             btnText: 'Read Story',
-            asidetImg: 'https://via.placeholder.com/201x180?text=popularAside'
+            asidetImg: 'https://images.unsplash.com/photo-1586282391077-58933c373376?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
           }, {
             category: 'Webinar',
             title: 'Webinar: Improving content marketing through visual storytelling',
             btnText: 'Watch Webinar',
-            asidetImg: 'https://via.placeholder.com/201x180?text=popularAside'
+            asidetImg: 'https://images.unsplash.com/photo-1533750516457-a7f992034fec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1381&q=80'
           }, {
             category: 'Report',
             title: 'How to reach audiences with social video: From Millennials to Gen Z',
             btnText: 'Read Report',
-            asidetImg: 'https://via.placeholder.com/201x180?text=popularAside'
+            asidetImg: 'https://images.unsplash.com/photo-1594122230689-45899d9e6f69?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
           }],
           popularBanner: [{
             id: 'popularBanner',
@@ -984,19 +985,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }],
           eventsTitle: 'Upcoming Events',
           events: [{
-            img: "https://via.placeholder.com/201x180?text=Event",
+            img: 'https://images.unsplash.com/photo-1487715433499-93acdc0bd7c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1414&q=80',
             block: 'events',
             category: 'Blog Post',
             title: '4 organic ways to improve your website KPIs',
             btnText: 'Read Report'
           }, {
-            img: "https://via.placeholder.com/201x180?text=Event",
+            img: 'https://images.unsplash.com/photo-1598931587008-88cc8a5e3a40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
             block: 'events',
             category: 'Blog Post',
             title: 'How to turn your next event into a video content goldmine',
             btnText: 'Read Report'
           }, {
-            img: "https://via.placeholder.com/201x180?text=Event",
+            img: 'https://images.unsplash.com/photo-1588058365718-9d74defc5313?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
             block: 'events',
             category: 'Blog Post',
             title: 'How to quickly turn ypur podcast into a video script',
@@ -1016,7 +1017,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         };
         this.blog = {
           p: [{
-            text: "##Add to Story## options streamlined into icons\n" + "2. *Project and Workflow State* are grouped together to better visualize their close relationship\n" + "3. *Story Type* is now placed on the right side when creating a new Story for consistency\n"
+            text: '##Add to Story## options streamlined into icons\n' + '2. *Project and Workflow State* are grouped together to better visualize their close relationship\n' + '3. *Story Type* is now placed on the right side when creating a new Story for consistency\n'
           }]
         };
         this.footer = [[{
@@ -1289,7 +1290,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   /***/
   function _(module, exports, __webpack_require__) {
     module.exports = __webpack_require__(
-    /*! C:\Users\User\Desktop\angular\wibbitzInAngular\src\main.ts */
+    /*! /home/abdullakh/WebstormProjects/angular/wibbitzInAngular/src/main.ts */
     "./src/main.ts");
     /***/
   }

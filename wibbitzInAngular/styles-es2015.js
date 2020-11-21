@@ -441,7 +441,7 @@ module.exports = exported;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\User\Desktop\angular\wibbitzInAngular\src\styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! /home/abdullakh/WebstormProjects/angular/wibbitzInAngular/src/styles.css */"./src/styles.css");
 
 
 /***/ })
