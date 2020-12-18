@@ -299,12 +299,12 @@ class PortfolioStoreService {
                 {
                     id: 3,
                     social: `<i class="fab fa-whatsapp"></i>`,
-                    socialHref: 'https://wa.me/79640731348'
+                    socialHref: 'https://wa.me/79389059767'
                 },
                 {
                     id: 4,
-                    social: `<i class="fab fa-instagram"></i>`,
-                    socialHref: 'https://www.instagram.com/gezikhanov.a/'
+                    social: `<i class="fab fa-telegram"></i>`,
+                    socialHref: 'https://t.me/Prime_user'
                 }
             ],
             formAboutMe: {
